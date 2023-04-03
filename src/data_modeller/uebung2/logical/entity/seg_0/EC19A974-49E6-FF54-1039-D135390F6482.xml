@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EC19A974-49E6-FF54-1039-D135390F6482" name="Reservierungsaufschlag">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:59:05 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Von" id="07805982-5165-F196-F492-927CBB31EAE4">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:59:13 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Bis" id="F57E83A6-D600-A59F-8C18-5BD6BF5F2646">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:59:17 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kosten" id="179E0905-0510-B27D-D660-64D444769659">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:59:19 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Bezeichnung" id="6BC5CB2E-97C3-9EEB-8C62-850F7428089F">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:00:36 UTC</createdTime>
+<generatorID>5F1160AD-A9CF-9F53-E469-BEEE1110255B</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<referedAttribute>73425633-E025-7CB9-D84F-195DBCD90B83</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="657110DA-005B-18BE-8AC9-15CAB5F1105E" name="Reservierungsaufschlag PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:15:37 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>07805982-5165-F196-F492-927CBB31EAE4</attributeRef>
+<attributeRef>6BC5CB2E-97C3-9EEB-8C62-850F7428089F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E3A17F39-2064-82F3-6700-C6FA49BFE362" name="Lokomotive">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:26:25 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="59120F30-E77F-75E9-863B-2ECEC6D8C476" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Serienbezeichnung" id="2F2786A3-253D-2DF2-1647-3215075FE960">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:26:54 UTC</createdTime>
+<generatorID>A4AF1C83-EACB-CD84-F35C-551B885DF7FF</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="59120F30-E77F-75E9-863B-2ECEC6D8C476" value="true"/>
+</engineerTo>
+<referedAttribute>001ED983-6562-718A-3333-76FAA56D1E81</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Zugnummer" id="A38F57BC-4300-9C39-7C87-9D897F326E6F">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:27:08 UTC</createdTime>
+<generatorID>71DCEB7A-14E6-9551-0978-B07FD8C3D6E3</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="59120F30-E77F-75E9-863B-2ECEC6D8C476" value="true"/>
+</engineerTo>
+<referedAttribute>866C03A0-F68A-B2C4-C816-C5D1538315FF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="36883CC1-0024-4C13-590C-7999D8AD65AC" name="Lokomotive PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:26:47 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="59120F30-E77F-75E9-863B-2ECEC6D8C476" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A38F57BC-4300-9C39-7C87-9D897F326E6F</attributeRef>
+<attributeRef>2F2786A3-253D-2DF2-1647-3215075FE960</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

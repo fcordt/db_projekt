@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="74F61C5A-526A-B3FA-A9C2-CE2989CD4921" name="Bahnhof">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>F26D609F-4C59-8244-1EDE-E97AA1A83707</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Name" id="9DF01809-1952-D897-4716-B7F881BACDB4">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>0EC014DE-2695-265C-F1D2-BE3A7D85CCD1</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Adresse" id="B76DB775-4738-3D02-1491-67F334C6A036">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>F11F37C3-B6FB-6D04-E6F9-914344306B7B</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ort_PLZ" id="4E802697-DFEF-4D50-574A-34CF2D243636">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>52A78CDD-D0E6-4EFD-34FC-EF98AC7FA5F7</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1B2EAAB4-A865-3E05-9ABB-BEC247CED34A" referredColumn="F558ACBC-A410-B8CD-1266-06894CBCE1CA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3FF9C584-E77E-78E9-C24B-278BEA1D66DA" name="Bahnhof_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>79FEF381-1A0F-6285-B05B-87D33550F756</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9DF01809-1952-D897-4716-B7F881BACDB4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E29517F7-F606-0232-D824-D6EE8C65455C" name="Bahnhof_Ort_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>58231891-7600-FB2F-7037-206DFD77FBDE</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E802697-DFEF-4D50-574A-34CF2D243636"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

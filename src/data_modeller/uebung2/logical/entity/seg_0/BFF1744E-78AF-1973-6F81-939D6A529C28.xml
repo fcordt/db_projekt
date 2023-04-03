@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BFF1744E-78AF-1973-6F81-939D6A529C28" name="Dauertyp">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:10:35 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="E09B0131-7D3F-115D-5267-B5E9706AA14B">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:10:41 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Lange Bezeichnung" id="9763D9A2-A417-0E79-DF10-AC674F52B0BE">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:10:54 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1BA9FF5F-DE55-F1A8-2267-DE7F22C564BB" name="Dauertyp PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:10:53 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E09B0131-7D3F-115D-5267-B5E9706AA14B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

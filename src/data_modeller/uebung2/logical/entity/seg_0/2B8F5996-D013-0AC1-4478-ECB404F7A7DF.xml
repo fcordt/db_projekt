@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B8F5996-D013-0AC1-4478-ECB404F7A7DF" name="Preis Je Haltestelle">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:07:46 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Von" id="2AC72D8F-3CF0-F642-60F6-8A9DDD41F302">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:07:56 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Bis" id="FF027475-6D94-A484-C0C0-F213F99B755E">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:08:03 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kosten" id="E8F3E44C-1F2C-204C-97F7-BCC85ADAE53E">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:08:00 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9323F8A6-41C5-419A-71CF-DA4CE368B7AB" name="Preis Je Haltestelle PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:16:27 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2AC72D8F-3CF0-F642-60F6-8A9DDD41F302</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F1966774-42B0-2A88-0CE2-F70399188B79" name="Einzelticketpreis">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:05:09 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Von" id="B7696548-33BB-7D58-1817-39699DDBCF2C">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:06:17 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Bis" id="4729FC26-3F78-4498-FB24-F53DE5F16F57">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:06:23 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kosten" id="008AF152-913A-1D9C-7F95-802EE7C5188C">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:06:31 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="1216ECD9-E059-4362-F659-90B8445270C0">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 10:07:10 UTC</createdTime>
+<generatorID>FA706444-035E-1A87-C24F-133277D51111</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<referedAttribute>8DA9108E-C76D-5E01-C563-2B19AE1FA65D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1C875FAC-8BB3-023E-9731-1D16236B7AEC" name="Einzelticketpreis PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:10:06 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="AC8AE1B5-D4BC-AD10-0C17-0E002582D06D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1216ECD9-E059-4362-F659-90B8445270C0</attributeRef>
+<attributeRef>B7696548-33BB-7D58-1817-39699DDBCF2C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

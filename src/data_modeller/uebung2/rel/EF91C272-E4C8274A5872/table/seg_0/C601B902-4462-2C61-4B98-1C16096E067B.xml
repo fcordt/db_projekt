@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C601B902-4462-2C61-4B98-1C16096E067B" name="Anonyme_Einzelfahrt">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>F059298C-AB9D-F1CB-CB8C-47D9212A9AD8</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Ticketnummer" id="EC297968-121F-7093-761A-17053AEC371A">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>DCED47D8-7206-FC08-B77B-88E9594A4A1C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE01AA68-3C6D-6A41-0E70-F15350529D39" referredColumn="7D93DEFD-2782-5A27-5907-E568C6986382"/>
+</associations>
+</Column>
+<Column name="Bahnsteig_Bahnsteig_ID" id="2DBF6D3A-E607-3831-CF77-74E555A151F4">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DEF8BDEE-88CA-C4FD-83B2-D73D945BACBF" referredColumn="2340500F-478D-C51D-97C0-E94E83691FF6"/>
+</associations>
+</Column>
+<Column name="Bahnsteig_Bahnsteig_ID2" id="C26FD47A-AC40-828E-A26B-7BACB1E89DB9">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8AB90905-F426-EB3E-1089-E3E37883C487" referredColumn="2340500F-478D-C51D-97C0-E94E83691FF6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FF490F4E-CB34-7C61-9335-4CEAA67EC84E" name="Anonyme_Einzelfahrt_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>C38843FA-83AA-66B5-DE17-EC8FEB1EEA0C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC297968-121F-7093-761A-17053AEC371A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="01E33F32-8F7B-5B0C-80CB-7546DFE5B16E" name="Anonyme_Einzelfahrt_Ticket_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>3CDC1C6E-5A39-FBC9-BC43-4F33AD9F168B</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC297968-121F-7093-761A-17053AEC371A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AA74B391-8AE1-8099-D76B-7FD9373FFE44" name="Anonyme_Einzelfahrt_Bahnsteig_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>2F1ED45C-E899-7CB6-9348-14F2A6DAC282</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DBF6D3A-E607-3831-CF77-74E555A151F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5EFA7511-767C-86E6-3B75-C0ABE275F98E" name="Anonyme_Einzelfahrt_Bahnsteig_FKv2">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>5D991DE8-70FB-7AB2-F1FA-69D21EA337CD</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C26FD47A-AC40-828E-A26B-7BACB1E89DB9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

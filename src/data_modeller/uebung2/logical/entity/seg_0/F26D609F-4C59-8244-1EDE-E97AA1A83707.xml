@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F26D609F-4C59-8244-1EDE-E97AA1A83707" name="Bahnhof">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:27:31 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Name" id="0EC014DE-2695-265C-F1D2-BE3A7D85CCD1">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:27:37 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Adresse" id="F11F37C3-B6FB-6D04-E6F9-914344306B7B">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:28:10 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PLZ" id="52A78CDD-D0E6-4EFD-34FC-EF98AC7FA5F7">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:44:40 UTC</createdTime>
+<generatorID>58231891-7600-FB2F-7037-206DFD77FBDE</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+</engineerTo>
+<referedAttribute>2BFBAE26-7BC5-EAF0-0866-E139E58E95C4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CF376805-ADBF-9665-4805-7EDE5B64C761" name="Bahnhof PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:50:54 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0EC014DE-2695-265C-F1D2-BE3A7D85CCD1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

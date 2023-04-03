@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="237F9FAB-D457-4853-423F-4FECE1DADD85" name="Sitzplatz">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>DB392D66-FAB5-9758-4D91-801938A847CC</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Sitzplatznummer" id="DFC56E93-A930-95FA-52F2-7910A9959906">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>19637C69-7241-D5F9-30D2-FBCEDCB82F9E</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Wagon_Zugnummer" id="AEBBF275-2BD5-6315-B20A-F875246FDE43">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>44B2AE0C-A431-B612-8CDB-A90381663BD8</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1662340A-1460-4594-2E30-BC66653A7DC3" referredColumn="CD9D0EDC-B777-77E6-14B9-A2B94AE8D013"/>
+</associations>
+</Column>
+<Column name="Wagon_Reihenfolge" id="C0E4AD24-CCA5-5561-7DAC-002E30560A84">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>E5CC38FE-6A19-7573-4785-1D6EDA7863D4</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1662340A-1460-4594-2E30-BC66653A7DC3" referredColumn="7DE8D37A-4C67-18AC-DB14-DE554A708274"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CF662870-87CD-5602-E150-4B433BF8497F" name="Sitzplatz_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>6706933D-1939-76A1-9429-2307A1324A42</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AEBBF275-2BD5-6315-B20A-F875246FDE43"/>
+<colUsage columnID="C0E4AD24-CCA5-5561-7DAC-002E30560A84"/>
+<colUsage columnID="DFC56E93-A930-95FA-52F2-7910A9959906"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8806E32E-E005-B482-1441-FB0EB1FECFEA" name="Sitzplatz_Wagon_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>0009B38E-E9B3-3182-6CA3-236560FC2DDF</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AEBBF275-2BD5-6315-B20A-F875246FDE43"/>
+<colUsage columnID="C0E4AD24-CCA5-5561-7DAC-002E30560A84"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

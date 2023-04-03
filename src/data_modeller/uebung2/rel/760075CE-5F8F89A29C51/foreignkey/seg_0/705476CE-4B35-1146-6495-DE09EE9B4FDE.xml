@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="705476CE-4B35-1146-6495-DE09EE9B4FDE" containerWithKeyObject="3FDAEC93-62E9-E0CA-850A-9CFF3D5DF99A" localFKIndex="F13B8E5A-9B4B-A770-B14C-53EA686825D3" name="Dauerticket_Ticket_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>A9FCE4B7-3C5D-7608-B2C8-99F753C86792</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<referredTableLongName>Ticket</referredTableLongName>
+<arc>E2109A86-668C-4427-FC4F-EBD514C6891B</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1DAEECF2-5804-2799-F2F4-63A20885E6A6</referredTableID>
+<keyObject>75DB0B22-1F07-D3CC-974A-3380C2279FEC</keyObject>
+<referredKeyID>75DB0B22-1F07-D3CC-974A-3380C2279FEC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Ticketnummer</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

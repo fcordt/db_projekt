@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8C889D63-957B-6AD2-0FA9-8405E3A71E8E" containerWithKeyObject="F0356F31-6525-C43C-C165-6E78B06809D3" localFKIndex="7CC82E4D-397B-E45A-0F8B-203C9209A7AB" name="Anonyme_Einzelfahrt_Bahnsteig_FKv2">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>5D991DE8-70FB-7AB2-F1FA-69D21EA337CD</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<referredTableLongName>Bahnsteig</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AEEB742F-7B2B-E01A-7589-3F073E723CD1</referredTableID>
+<keyObject>0D36E736-36E7-2834-C9D0-C2FDC125E232</keyObject>
+<referredKeyID>0D36E736-36E7-2834-C9D0-C2FDC125E232</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Bahnhof_Name,Nr</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

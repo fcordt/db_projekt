@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="834437FA-FF59-DA33-CBDC-AD2D13438EA7" containerWithKeyObject="5919A440-3A70-6356-449F-DAEF43F39BF6" localFKIndex="92A671DB-1EAC-08C2-3DB5-17C4F41194B0" name="Einzelfahrt_mit_SPR_Anonyme_Einzelfahrt_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>89583F43-8941-96E2-F373-641C79B83CD4</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<referredTableLongName>Anonyme_Einzelfahrt</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F0356F31-6525-C43C-C165-6E78B06809D3</referredTableID>
+<keyObject>D7BDE00E-9643-1869-B597-8C9DDB669BDA</keyObject>
+<referredKeyID>D7BDE00E-9643-1869-B597-8C9DDB669BDA</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Ticketnummer</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

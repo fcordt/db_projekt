@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C43E3872-6752-9FDF-46A6-DDC96F095F14" containerWithKeyObject="7AA4F886-98AC-452F-3407-8A5705D17011" localFKIndex="6E53FB0D-B646-4E91-FCF2-39A2A3C3F331" name="Fahrplan_Zug_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:41:15 UTC</createdTime>
+<generatorID>BEE2BDF2-F0B9-805B-59C3-60C18CAA0E9C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<referredTableLongName>Zug</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6F3578D7-A727-4F44-30B5-937B072867C9</referredTableID>
+<keyObject>3EA86859-96D4-6F71-D50B-A283D4FC488E</keyObject>
+<referredKeyID>3EA86859-96D4-6F71-D50B-A283D4FC488E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Zugnummer</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

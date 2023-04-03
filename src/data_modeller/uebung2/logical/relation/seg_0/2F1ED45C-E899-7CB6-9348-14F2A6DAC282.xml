@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="bis" directorySegmentName="seg_0" id="2F1ED45C-E899-7CB6-9348-14F2A6DAC282">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:49:07 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="6AE2D8F1-D7FF-D8B7-199A-F51F849E7BBD" value="true"/>
+</engineerTo>
+<sourcePk>3F0CCCA6-6DF8-A4CD-5262-24192606CB15</sourcePk>
+<identifying>false</identifying>
+<nameOnTarget>bis_bahnsteig</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>83E4BF98-A248-E7E1-471B-C5AAABD5C3BF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F059298C-AB9D-F1CB-CB8C-47D9212A9AD8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

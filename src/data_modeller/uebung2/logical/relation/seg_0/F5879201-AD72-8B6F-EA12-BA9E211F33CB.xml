@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="abfahrt" directorySegmentName="seg_0" id="F5879201-AD72-8B6F-EA12-BA9E211F33CB">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:38:47 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="6AE2D8F1-D7FF-D8B7-199A-F51F849E7BBD" value="true"/>
+</engineerTo>
+<sourcePk>3F0CCCA6-6DF8-A4CD-5262-24192606CB15</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>abfahrt_</nameOnSource>
+<nameOnTarget>abfahrt_</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>83E4BF98-A248-E7E1-471B-C5AAABD5C3BF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>ADD5F9F7-E509-6880-D6B3-30C73311C7D5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

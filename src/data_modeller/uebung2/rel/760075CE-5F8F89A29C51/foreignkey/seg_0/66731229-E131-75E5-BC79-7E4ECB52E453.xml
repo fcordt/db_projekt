@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="66731229-E131-75E5-BC79-7E4ECB52E453" containerWithKeyObject="62BF0EFF-B31B-A688-444C-D754301EF50F" localFKIndex="0AE6B3E2-69AC-92D2-3280-701A4ADC7061" name="Einzelticketpreis_Zugtyp_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>FA706444-035E-1A87-C24F-133277D51111</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<referredTableLongName>Zugtyp</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B8FC7D0B-89AA-7932-1502-221F8A3E760C</referredTableID>
+<keyObject>62DD9BCB-05BA-7E4E-BFD1-99541B366343</keyObject>
+<referredKeyID>62DD9BCB-05BA-7E4E-BFD1-99541B366343</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

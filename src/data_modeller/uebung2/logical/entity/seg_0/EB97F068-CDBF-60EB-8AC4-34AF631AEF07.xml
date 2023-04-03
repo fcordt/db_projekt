@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EB97F068-CDBF-60EB-8AC4-34AF631AEF07" name="Ort">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:43:52 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PLZ" id="2BFBAE26-7BC5-EAF0-0866-E139E58E95C4">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:44:05 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="0C8D28CE-0FA0-2559-2975-3F1F54B69E60">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:44:13 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B5DE6804-1F05-C05E-7821-D0BE09CB9B41" name="Ort PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:44:11 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2BFBAE26-7BC5-EAF0-0866-E139E58E95C4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

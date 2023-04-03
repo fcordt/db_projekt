@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="047D8F2A-9207-CE10-A39D-D3F829ECDFE0" name="Zug">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:16:47 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="59120F30-E77F-75E9-863B-2ECEC6D8C476" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Zugnummer" id="866C03A0-F68A-B2C4-C816-C5D1538315FF">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:16:52 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="59120F30-E77F-75E9-863B-2ECEC6D8C476" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="5BAF6BDD-9F08-A12D-3501-85F4523D72F2">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:17:10 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="59120F30-E77F-75E9-863B-2ECEC6D8C476" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="F4682762-C913-026D-D76A-7A1049248B1E">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:23:45 UTC</createdTime>
+<generatorID>3902974E-8A5C-E97E-4B56-0F1902029CDC</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="59120F30-E77F-75E9-863B-2ECEC6D8C476" value="true"/>
+</engineerTo>
+<referedAttribute>8DA9108E-C76D-5E01-C563-2B19AE1FA65D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DB32869D-5571-20A2-94B6-A9DF45FF6383" name="Zug PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:17:21 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="59120F30-E77F-75E9-863B-2ECEC6D8C476" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>866C03A0-F68A-B2C4-C816-C5D1538315FF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

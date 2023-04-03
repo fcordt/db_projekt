@@ -1,0 +1,164 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E7C96569-CECB-13B2-8EF1-DC47C22BC42D" name="Streckenabschnitt">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>ADD5F9F7-E509-6880-D6B3-30C73311C7D5</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Abfahrtszeit" id="10F8F55B-DF70-20E1-473D-20F8FD7A90B6">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>75A4D1C6-7509-1036-6851-D9BB79FD48A3</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ankunftszeit" id="0A156479-EA94-C6BC-E6CF-FD40CE29079E">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>3B985D09-44DE-E80D-3630-53E25066EC4F</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fahrplan_Nr" id="95EBD95A-3635-2D76-A1AD-C41AB9D60DAA">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>FA841635-832A-2708-1536-A801B4C378FA</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E350B5D8-903F-C789-7FF5-591E50EA8EA2" referredColumn="76D63724-601F-6011-28DD-E14C6A289196"/>
+</associations>
+</Column>
+<Column name="Bahnsteig_Nr2" id="1635C131-00AF-7A64-F20C-B1071FD5424A">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>3B861841-9A24-BB3A-37F3-C1CC3B38D52E</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F84EF2F6-88DF-009D-DB21-EFC0189BD27D" referredColumn="1C4D89BA-23EB-1C7A-145A-F311BB5966BB"/>
+</associations>
+</Column>
+<Column name="Bahnsteig_Nr" id="EC23D1F7-5F9B-461B-F0B3-23A688EC31AD">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>F918A7EF-26E2-DD48-6D2B-DCFD31EB1218</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DB743C10-0B35-C49A-09D6-7F795A2694E9" referredColumn="1C4D89BA-23EB-1C7A-145A-F311BB5966BB"/>
+</associations>
+</Column>
+<Column name="Bahnsteig_Name2" id="F9B842C4-D3A6-18B2-402E-D2CDBAB41D13">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>188FC562-753B-5B84-967A-68E99538C90E</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F84EF2F6-88DF-009D-DB21-EFC0189BD27D" referredColumn="A409166F-AAA0-F6C2-66FA-DCECA4AFC80B"/>
+</associations>
+</Column>
+<Column name="Bahnsteig_Name" id="E38A1849-B80F-AF74-7F0F-D9A7BF2A521E">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>E5CDA726-07DD-A6E3-CAA3-35F4AD6787E1</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DB743C10-0B35-C49A-09D6-7F795A2694E9" referredColumn="A409166F-AAA0-F6C2-66FA-DCECA4AFC80B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="661F8120-9112-CD4B-CFC9-2055A12F6F1E" name="Streckenabschnitt_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>350F772E-30DD-C8CF-7FFF-E9A9C24A2309</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="10F8F55B-DF70-20E1-473D-20F8FD7A90B6"/>
+<colUsage columnID="95EBD95A-3635-2D76-A1AD-C41AB9D60DAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="82FDB05C-BEB8-860C-05EC-47CF2B1342F3" name="Streckenabschnitt_Bahnsteig_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>F5879201-AD72-8B6F-EA12-BA9E211F33CB</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E38A1849-B80F-AF74-7F0F-D9A7BF2A521E"/>
+<colUsage columnID="EC23D1F7-5F9B-461B-F0B3-23A688EC31AD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="42B7EB75-CE7B-ABC1-345D-4E4068432A3F" name="Streckenabschnitt_Bahnsteig_FKv2">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>9A6BA756-B8FA-18CD-342C-821620C5747D</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9B842C4-D3A6-18B2-402E-D2CDBAB41D13"/>
+<colUsage columnID="1635C131-00AF-7A64-F20C-B1071FD5424A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="231EC15E-3CF6-847A-8B04-BE9F6CAE915A" name="Streckenabschnitt_Fahrplan_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>2971D3BF-8E78-0F5D-D077-43E2C530F55D</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95EBD95A-3635-2D76-A1AD-C41AB9D60DAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5919A440-3A70-6356-449F-DAEF43F39BF6" name="Einzelfahrt_mit_SPR">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>B91B111C-CB9B-883E-9E89-8DA465236871</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Ticketnummer" id="6A225F5A-3F7A-E998-BAD5-F0FE275D4633">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>DCED47D8-7206-FC08-B77B-88E9594A4A1C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="834437FA-FF59-DA33-CBDC-AD2D13438EA7" referredColumn="701602EB-C240-B8DB-D905-B6911EB8644E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9C5B8E0E-DD96-2803-0B26-EFB3E93EC711" name="Einzelfahrt_mit_SPR_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>C38843FA-83AA-66B5-DE17-EC8FEB1EEA0C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A225F5A-3F7A-E998-BAD5-F0FE275D4633"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="92A671DB-1EAC-08C2-3DB5-17C4F41194B0" name="Einzelfahrt_mit_SPR_Anonyme_Einzelfahrt_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>89583F43-8941-96E2-F373-641C79B83CD4</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A225F5A-3F7A-E998-BAD5-F0FE275D4633"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A0E824B-5417-4700-2BF2-476A7CCA0BCB" name="Einzelfahrt_mit_SPR_Sitzplatz_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>72777CC8-AD39-E107-0BC8-EEC3D5BF7DD1</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

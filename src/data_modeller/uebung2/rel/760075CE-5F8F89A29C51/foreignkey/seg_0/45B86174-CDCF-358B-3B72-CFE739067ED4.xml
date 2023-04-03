@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="45B86174-CDCF-358B-3B72-CFE739067ED4" containerWithKeyObject="60A30E04-66F9-69BF-D8E7-B6DBEFB71828" localFKIndex="4F7A311A-E0DD-2DD5-FC73-7239FC6524C9" name="Reservierungsaufschlag_Wagontyp_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>5F1160AD-A9CF-9F53-E469-BEEE1110255B</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<referredTableLongName>Wagontyp</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>11D62DA5-555E-8144-567E-C44E1D0C32A5</referredTableID>
+<keyObject>A06F023B-8D88-DDD7-58AB-0B213A473D71</keyObject>
+<referredKeyID>A06F023B-8D88-DDD7-58AB-0B213A473D71</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Bezeichnung</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3FDAEC93-62E9-E0CA-850A-9CFF3D5DF99A" name="Dauerticket">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>A66E3482-7A5B-C28A-4AD7-7844861F7C20</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Ticketnummer" id="28BADE37-E958-F920-ECE1-E6A60247780E">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>DCED47D8-7206-FC08-B77B-88E9594A4A1C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="705476CE-4B35-1146-6495-DE09EE9B4FDE" referredColumn="F682E320-61AD-B0BD-CDDC-5DED8F308C1B"/>
+</associations>
+</Column>
+<Column name="Kundin_Kundennummer" id="96F0AA78-91A8-1C37-4FEA-3890D8FA041B">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>7F8F2ADE-D81A-6B14-B000-79AFAA00FB98</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B67FE8F8-E4CB-9077-9B61-B81FD5A56144" referredColumn="05B55CE4-8F05-C9C7-B7F6-9CF500BBBA88"/>
+</associations>
+</Column>
+<Column name="Dauertyp_ID" id="0C6BC29B-707D-4291-FE67-B0058308C7C3">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>FF6760EF-7CE6-1D38-39C8-46B06AE6325A</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="82D259EA-16F8-2406-2780-BA97F3F36F1B" referredColumn="4BDB6664-3845-2C3D-0525-D81D2CB06B4F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="78E4714C-DE1F-7D8E-E0C2-689D63431E28" name="Dauerticket_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>C38843FA-83AA-66B5-DE17-EC8FEB1EEA0C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="28BADE37-E958-F920-ECE1-E6A60247780E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F13B8E5A-9B4B-A770-B14C-53EA686825D3" name="Dauerticket_Ticket_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>A9FCE4B7-3C5D-7608-B2C8-99F753C86792</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="28BADE37-E958-F920-ECE1-E6A60247780E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="633F879D-FD50-F8E2-EF38-F6F503DE2D65" name="Dauerticket_Kundin_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>2CC9A500-EC5C-D418-B4FD-924E88040D3F</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96F0AA78-91A8-1C37-4FEA-3890D8FA041B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="97608376-6320-0466-76AB-45BBBD56370D" name="Dauerticket_Dauertyp_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>25707A25-FD66-5DC6-3A36-9A9B280B5E4C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C6BC29B-707D-4291-FE67-B0058308C7C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

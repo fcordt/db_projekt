@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3CF34F92-2DFD-5E49-31EE-BC8D76374538" name="Lokomotive">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>E3A17F39-2064-82F3-6700-C6FA49BFE362</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Lokomotiventyp_Serienbezeichnung" id="94E9F4B7-F255-78B7-77B1-8B13F5A7C5C4">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>2F2786A3-253D-2DF2-1647-3215075FE960</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9F261EA1-E796-783C-B85C-C5BC4492A832" referredColumn="0D1ED432-2719-12FC-6D97-7157503D770C"/>
+</associations>
+</Column>
+<Column name="Zug_Zugnummer" id="058F08AF-F827-B57D-72ED-538F98727398">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>A38F57BC-4300-9C39-7C87-9D897F326E6F</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B9B7E100-4963-3B0B-6A2B-501455900A77" referredColumn="D1F92EEB-AFE4-7D0E-D788-D65AB2C50CC5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DE084818-1CD9-89CA-7517-1320263095FE" name="Lokomotive_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>36883CC1-0024-4C13-590C-7999D8AD65AC</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="058F08AF-F827-B57D-72ED-538F98727398"/>
+<colUsage columnID="94E9F4B7-F255-78B7-77B1-8B13F5A7C5C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E7124C6D-F8A3-B094-F8AE-6D86AEF20DE7" name="Lokomotive_Lokomotiventyp_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>A4AF1C83-EACB-CD84-F35C-551B885DF7FF</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="94E9F4B7-F255-78B7-77B1-8B13F5A7C5C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="652B782D-979A-E94D-98FE-3762B42C0D82" name="Lokomotive_Zug_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>71DCEB7A-14E6-9551-0978-B07FD8C3D6E3</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="058F08AF-F827-B57D-72ED-538F98727398"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

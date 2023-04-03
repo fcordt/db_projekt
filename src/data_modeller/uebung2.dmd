@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="uebung2" id="8266A8FF-3146-9A6F-06F8-CEC202D768D4" version="3.5">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:12:06 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>8266A8FF-3146-9A6F-06F8-CEC202D768D4</designId>
+</OSDM_Design>

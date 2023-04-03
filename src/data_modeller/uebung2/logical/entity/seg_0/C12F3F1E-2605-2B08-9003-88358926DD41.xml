@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C12F3F1E-2605-2B08-9003-88358926DD41" name="Wagon">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:22:13 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Reihenfolge" id="9872979F-04F1-4E40-6DDB-F6C95EEC19EF">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:22:22 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Bezeichnung" id="79E79898-2A3E-AE18-9756-659083D90F8B">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:23:13 UTC</createdTime>
+<generatorID>1B276661-235C-8B3F-26FB-37BB45204A58</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<referedAttribute>73425633-E025-7CB9-D84F-195DBCD90B83</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="6A5F7478-827B-DEB1-9ACB-2CB4C58592CF">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:23:20 UTC</createdTime>
+<generatorID>0F026EAA-3FED-A8B7-83AA-183B6E9F3967</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<referedAttribute>1142A614-8400-631E-4077-30D0D4D71798</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Zugnummer" id="36A220E7-5E8C-4E0B-32C9-B6E0ADDB61A6">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:23:35 UTC</createdTime>
+<generatorID>183CD8DA-16DE-BE56-0F36-1F370004E5BA</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<referedAttribute>866C03A0-F68A-B2C4-C816-C5D1538315FF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F78C1164-65C8-46E7-078F-C99A43BADBF1" name="Wagon PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:09:50 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>36A220E7-5E8C-4E0B-32C9-B6E0ADDB61A6</attributeRef>
+<attributeRef>9872979F-04F1-4E40-6DDB-F6C95EEC19EF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

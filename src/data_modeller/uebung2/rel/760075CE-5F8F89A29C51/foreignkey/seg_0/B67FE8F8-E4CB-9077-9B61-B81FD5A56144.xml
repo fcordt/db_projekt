@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B67FE8F8-E4CB-9077-9B61-B81FD5A56144" containerWithKeyObject="3FDAEC93-62E9-E0CA-850A-9CFF3D5DF99A" localFKIndex="633F879D-FD50-F8E2-EF38-F6F503DE2D65" name="Dauerticket_Kundin_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:19:43 UTC</createdTime>
+<generatorID>2CC9A500-EC5C-D418-B4FD-924E88040D3F</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<referredTableLongName>Kundin</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0FE109D1-6E44-1756-8A9D-B52499626EC7</referredTableID>
+<keyObject>38EF5C25-9AEF-ABD5-6AA4-1E76B9E6BFBB</keyObject>
+<referredKeyID>38EF5C25-9AEF-ABD5-6AA4-1E76B9E6BFBB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Kundennummer</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

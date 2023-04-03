@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F059298C-AB9D-F1CB-CB8C-47D9212A9AD8" name="Anonyme Einzelfahrt">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:47:03 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="6AE2D8F1-D7FF-D8B7-199A-F51F849E7BBD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>3047AF29-C196-D051-D031-843FF039B79B</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Name" id="D3C80DCD-48E5-F16F-D339-F531DB7CA8CE">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:06:17 UTC</createdTime>
+<generatorID>2F1ED45C-E899-7CB6-9348-14F2A6DAC282</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="6AE2D8F1-D7FF-D8B7-199A-F51F849E7BBD" value="true"/>
+</engineerTo>
+<referedAttribute>40B65154-6971-0D73-F939-91B8B7DA43EA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr" id="E4576646-5BB3-B289-6362-9039BB3E9A2E">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:06:17 UTC</createdTime>
+<generatorID>2F1ED45C-E899-7CB6-9348-14F2A6DAC282</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="6AE2D8F1-D7FF-D8B7-199A-F51F849E7BBD" value="true"/>
+</engineerTo>
+<referedAttribute>66E2A174-3009-DEA6-EBCC-5FDD3A1CC2A7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name1" id="39070A6F-0DCA-10FC-EC6B-A60DEA049E5A">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:06:20 UTC</createdTime>
+<generatorID>5D991DE8-70FB-7AB2-F1FA-69D21EA337CD</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="6AE2D8F1-D7FF-D8B7-199A-F51F849E7BBD" value="true"/>
+</engineerTo>
+<referedAttribute>40B65154-6971-0D73-F939-91B8B7DA43EA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr1" id="2931EB58-33E8-6468-8B07-1259A4240397">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:06:20 UTC</createdTime>
+<generatorID>5D991DE8-70FB-7AB2-F1FA-69D21EA337CD</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="6AE2D8F1-D7FF-D8B7-199A-F51F849E7BBD" value="true"/>
+</engineerTo>
+<referedAttribute>66E2A174-3009-DEA6-EBCC-5FDD3A1CC2A7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4656D845-F12C-CACA-B6AE-61E2F2D4A6AB" name="Anonyme Einzelfahrt PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 20:06:17 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="6AE2D8F1-D7FF-D8B7-199A-F51F849E7BBD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>

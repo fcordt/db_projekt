@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ADD5F9F7-E509-6880-D6B3-30C73311C7D5" name="Streckenabschnitt">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:35:22 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Abfahrtszeit" id="75A4D1C6-7509-1036-6851-D9BB79FD48A3">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:35:29 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ankunftszeit" id="3B985D09-44DE-E80D-3630-53E25066EC4F">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:35:59 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr" id="FA841635-832A-2708-1536-A801B4C378FA">
+<createdBy>fcord</createdBy>
+<createdTime>2023-03-25 09:37:44 UTC</createdTime>
+<generatorID>2971D3BF-8E78-0F5D-D077-43E2C530F55D</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<referedAttribute>F9FE8092-5251-68DE-5E1D-CFB6F86C4888</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr1" id="3B861841-9A24-BB3A-37F3-C1CC3B38D52E">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:52:08 UTC</createdTime>
+<generatorID>9A6BA756-B8FA-18CD-342C-821620C5747D</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<referedAttribute>66E2A174-3009-DEA6-EBCC-5FDD3A1CC2A7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr2" id="F918A7EF-26E2-DD48-6D2B-DCFD31EB1218">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:52:08 UTC</createdTime>
+<generatorID>F5879201-AD72-8B6F-EA12-BA9E211F33CB</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<referedAttribute>66E2A174-3009-DEA6-EBCC-5FDD3A1CC2A7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="188FC562-753B-5B84-967A-68E99538C90E">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:52:48 UTC</createdTime>
+<generatorID>9A6BA756-B8FA-18CD-342C-821620C5747D</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<referedAttribute>40B65154-6971-0D73-F939-91B8B7DA43EA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name1" id="E5CDA726-07DD-A6E3-CAA3-35F4AD6787E1">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:52:48 UTC</createdTime>
+<generatorID>F5879201-AD72-8B6F-EA12-BA9E211F33CB</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<referedAttribute>40B65154-6971-0D73-F939-91B8B7DA43EA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="350F772E-30DD-C8CF-7FFF-E9A9C24A2309" name="Streckenabschnitt PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-03 19:15:11 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<engineerTo>
+<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>75A4D1C6-7509-1036-6851-D9BB79FD48A3</attributeRef>
+<attributeRef>FA841635-832A-2708-1536-A801B4C378FA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
