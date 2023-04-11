@@ -1,0 +1,121 @@
+\documentclass[english, paper]{mmt} % use for seminar paper
+
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage[toc,page]{appendix}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\usepackage{breakurl}
+
+\usepackage{amsmath}
+\usepackage[autostyle,german=guillemets]{csquotes}
+
+\usepackage{verbatim}
+\usepackage{setspace}
+\usepackage{parskip}
+\onehalfspacing
+
+\newcommand{\detailtexcount}[1]{%
+  \immediate\write18{texcount -merge -sum -q #1.tex > #1.wcdetail }%
+  \verbatiminput{#1.wcdetail}%
+}
+
+
+\usepackage{abbrevs}
+%% the following solves a bug in the abbrevs package, that adds an empty
+%% space after the abbrev
+\makeatletter
+\renewcommand\maybe@space@{%
+  % \@tempswatrue % <= this is in the original
+  \maybe@ictrue % <= this is new
+  \expandafter   \@tfor
+    \expandafter \reserved@a
+    \expandafter :%
+    \expandafter =%
+                 \nospacelist
+                 \do \t@st@ic
+  % \if@tempswa % <= this is in the original
+  \ifmaybe@ic % <= this is new
+    \space
+  \fi
+}
+\makeatother
+%%
+
+\usepackage[style=ieee,maxbibnames=2,minbibnames=1,maxcitenames=2,mincitenames=1, backend=biber]{biblatex}
+\bibliography{bibliography.bib}
+
+%% Add configuration options
+\include{_configuration}
+
+%% Paper title.
+
+\title{\titlename \\ \large \subtitlename}
+
+%% This is how authors are specified in the conference style
+
+%% Author 
+\author{
+	\authornamea\\ \tiny \authormaila 
+	\\ \tiny \authorinsta
+	\and
+	\authornameb\\ \tiny \authormailb 
+	\\ \tiny \authorinstb
+	\and
+	\authornamec\\ \tiny \authormailc
+	\\ \tiny \authorinstc
+}
+
+\newcommand{\printbibliographyiee}{\begin{singlespace}\printbibliography\end{singlespace}}
+
+\begin{document}
+\selectthesislanguage
+
+\pagenumbering{gobble}
+
+\begingroup 
+% is required because paper template messes with sizes
+\fontsize{12}{18}\selectfont        
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 2pt minus 1pt}
+\sectionfont{\fontsize{14}{15}\selectfont}    
+
+    \onecolumn           
+    
+    \pagenumbering{roman}
+
+\endgroup
+
+
+\mmtcolumnmode % switch back to column formatting of stylesheet
+
+\maketitle % used for paper formatting
+
+\pagenumbering{arabic}
+
+
+\input{body} % the main text
+
+\nocite{*}
+
+\printbibliographyiee
+\begingroup 
+    % is required because paper template messes with sizes
+    \fontsize{12}{18}\selectfont        
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{5pt plus 2pt minus 1pt}\sectionfont{\fontsize{14}{15}\selectfont}
+\endgroup
+
+\end{document}
