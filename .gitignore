@@ -22,7 +22,7 @@ oracle-19c
 *.mtc1
 *.out
 *.synctex.gz
-*.pdf
+main.pdf
 *.bcf
 *.run.xml
 *.fls
