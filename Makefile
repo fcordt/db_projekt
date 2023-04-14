@@ -1,5 +1,5 @@
 db_pw = test123
-db_sid = db_uebung
+db_sid = dbuebung
 docker_name = db_uebung_ora_19c
 pwd = $(shell pwd)
 db_data_path = $(pwd)/oracle-19c/
@@ -12,22 +12,22 @@ initialize_db:
 	-p 1521:1521 \
 	-e ORACLE_SID=$(db_sid) \
 	-e ORACLE_PWD=$(db_pw) \
-	-e ORACLE_CHARACTERSET=AL16UTF8 \
+	-e ORACLE_CHARACTERSET=UTF8 \
 	-v $(db_data_path)/oradata/:/opt/oracle/oradata \
 	-d doctorkirk/oracle-19c
 
 .PHONY: start_db
 start_db:
-	sudo docker start -d $(docker_name)
+	sudo docker start $(docker_name)
 
 .PHONY: stop_db
 stop_db:
-	sudo docker stop $(docker_name)
+	sudo docker stop $(docker_name) || true
 
 .PHONY: remove_db
 remove_db:
 	make stop_db
-	sudo docker rm $(docker_name)
+	sudo docker rm $(docker_name) || true
 	sudo rm -R $(db_data_path)
 	
 .PHONY: reinitialize_db

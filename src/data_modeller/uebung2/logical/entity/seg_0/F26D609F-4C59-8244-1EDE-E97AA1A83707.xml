@@ -4,7 +4,7 @@
 <createdTime>2023-03-25 09:27:31 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
 <engineerTo>
-<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2023-03-25 09:27:37 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
 <engineerTo>
-<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2023-03-25 09:28:10 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
 <engineerTo>
-<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -47,14 +47,14 @@
 <generatorID>58231891-7600-FB2F-7037-206DFD77FBDE</generatorID>
 <ownerDesignName>uebung2</ownerDesignName>
 <engineerTo>
-<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
 </engineerTo>
 <referedAttribute>2BFBAE26-7BC5-EAF0-0866-E139E58E95C4</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>4</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -63,7 +63,7 @@
 <createdTime>2023-04-03 19:50:54 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
 <engineerTo>
-<item key="076C670B-16A3-3AD5-1B54-FD24FCF877C6" value="true"/>
+<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

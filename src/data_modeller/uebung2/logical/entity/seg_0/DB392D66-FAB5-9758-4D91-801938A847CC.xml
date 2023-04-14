@@ -4,7 +4,7 @@
 <createdTime>2023-03-25 09:51:30 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
 <engineerTo>
-<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,10 +20,13 @@
 <createdTime>2023-03-25 09:51:35 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
 <engineerTo>
-<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
 </engineerTo>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Zugnummer" id="44B2AE0C-A431-B612-8CDB-A90381663BD8">
 <createdBy>fcord</createdBy>
@@ -31,14 +34,14 @@
 <generatorID>0009B38E-E9B3-3182-6CA3-236560FC2DDF</generatorID>
 <ownerDesignName>uebung2</ownerDesignName>
 <engineerTo>
-<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
 </engineerTo>
 <referedAttribute>36A220E7-5E8C-4E0B-32C9-B6E0ADDB61A6</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Reihenfolge" id="E5CC38FE-6A19-7573-4785-1D6EDA7863D4">
 <createdBy>fcord</createdBy>
@@ -46,14 +49,14 @@
 <generatorID>0009B38E-E9B3-3182-6CA3-236560FC2DDF</generatorID>
 <ownerDesignName>uebung2</ownerDesignName>
 <engineerTo>
-<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
 </engineerTo>
 <referedAttribute>9872979F-04F1-4E40-6DDB-F6C95EEC19EF</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -62,7 +65,7 @@
 <createdTime>2023-04-03 20:13:50 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
 <engineerTo>
-<item key="5F028998-F8C2-4529-6739-CDB5DD51C970" value="true"/>
+<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
