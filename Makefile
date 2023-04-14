@@ -31,5 +31,6 @@ remove_db:
 	sudo rm -R $(db_data_path)
 	
 .PHONY: reinitialize_db
+reinitialize_db:
 	make remove_db
 	make initialize_db
