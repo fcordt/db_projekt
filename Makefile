@@ -41,3 +41,7 @@ remove_db:
 reinitialize_db:
 	make remove_db
 	make initialize_db
+
+.PHONY: migrate_db
+migrate_db:
+	flyway -user=$(user_name) -password=$(user_pw) -url=jdbc:oracle:thin:@localhost:1521/$(db_sid) migrate
