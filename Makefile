@@ -1,5 +1,7 @@
 db_pw = test123
 db_sid = dbuebung
+user_name = dbuser
+user_pw = test
 docker_name = db_uebung_ora_19c
 pwd = $(shell pwd)
 db_data_path = $(pwd)/oracle-19c/
@@ -15,10 +17,15 @@ initialize_db:
 	-e ORACLE_CHARACTERSET=UTF8 \
 	-v $(db_data_path)/oradata/:/opt/oracle/oradata \
 	-d doctorkirk/oracle-19c
+	make create_user
 
 .PHONY: start_db
 start_db:
 	sudo docker start $(docker_name)
+
+.PHONY: create_user
+create_user:
+	./scripts/create_user.sh $(db_pw) $(db_sid) $(user_name) $(user_pw)
 
 .PHONY: stop_db
 stop_db:
