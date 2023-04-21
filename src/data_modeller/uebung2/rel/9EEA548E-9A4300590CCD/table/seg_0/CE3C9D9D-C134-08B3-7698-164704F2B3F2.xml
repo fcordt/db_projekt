@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CE3C9D9D-C134-08B3-7698-164704F2B3F2" name="Zug">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>047D8F2A-9207-CE10-A39D-D3F829ECDFE0</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Zugnummer" id="D33662DC-274C-9912-26DA-377C9C42369E">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>866C03A0-F68A-B2C4-C816-C5D1538315FF</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="549872B7-3E9E-6701-F66B-7F2FEFDF81ED">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>5BAF6BDD-9F08-A12D-3501-85F4523D72F2</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Zugtyp_ID" id="18F397BC-2CA7-44B6-E338-0C5327BCDA3D">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>F4682762-C913-026D-D76A-7A1049248B1E</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA026A30-A343-55FB-0104-A4795CF4CE74" referredColumn="DB4F04A9-4AC4-6714-F198-697295B04F1F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="44600A3C-52E0-99DC-05B0-A472475F76DE" name="Zug_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>DB32869D-5571-20A2-94B6-A9DF45FF6383</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D33662DC-274C-9912-26DA-377C9C42369E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BBAC23F8-4D18-1A11-158B-7E8F993F5F17" name="Zug_Zugtyp_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>3902974E-8A5C-E97E-4B56-0F1902029CDC</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="18F397BC-2CA7-44B6-E338-0C5327BCDA3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

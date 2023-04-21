@@ -3,9 +3,6 @@
 <createdBy>fcord</createdBy>
 <createdTime>2023-03-25 09:52:15 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
-<engineerTo>
-<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -15,36 +12,32 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<generateDiscrimColumn>true</generateDiscrimColumn>
+<discriminatorValue>DAUERTICKET</discriminatorValue>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Kundennummer" id="7F8F2ADE-D81A-6B14-B000-79AFAA00FB98">
 <createdBy>fcord</createdBy>
 <createdTime>2023-03-25 09:53:17 UTC</createdTime>
 <generatorID>2CC9A500-EC5C-D418-B4FD-924E88040D3F</generatorID>
 <ownerDesignName>uebung2</ownerDesignName>
-<engineerTo>
-<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
-</engineerTo>
 <referedAttribute>7CE55EA3-3D38-DF3D-1E8E-D10136D86DFB</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>9</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ID" id="FF6760EF-7CE6-1D38-39C8-46B06AE6325A">
 <createdBy>fcord</createdBy>
 <createdTime>2023-03-25 10:11:36 UTC</createdTime>
 <generatorID>25707A25-FD66-5DC6-3A36-9A9B280B5E4C</generatorID>
 <ownerDesignName>uebung2</ownerDesignName>
-<engineerTo>
-<item key="3816166E-D33F-B7D2-6CED-6DA2164C868A" value="true"/>
-</engineerTo>
 <referedAttribute>E09B0131-7D3F-115D-5267-B5E9706AA14B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

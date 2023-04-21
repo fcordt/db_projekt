@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F52AE0F7-964F-2BE7-7E75-D8FC203FCE98" name="Wagon">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>C12F3F1E-2605-2B08-9003-88358926DD41</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Reihenfolge" id="BBB0373E-99D5-DB06-2D1F-1794137E885F">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>9872979F-04F1-4E40-6DDB-F6C95EEC19EF</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Wagontyp_Bezeichnung" id="EF0DC32E-CB15-70D3-C430-139A62381958">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>79E79898-2A3E-AE18-9756-659083D90F8B</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DA2C5806-10BD-B1E0-A470-B87247457DF9" referredColumn="870EECA4-F9C5-38F2-4974-28CB9C8DE934"/>
+</associations>
+</Column>
+<Column name="Klasse_ID" id="C1F368F0-7F84-AEFC-2077-220F7EFD57F4">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>6A5F7478-827B-DEB1-9ACB-2CB4C58592CF</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="586F5AFE-4610-2186-3434-8B717B1B63ED" referredColumn="E12A326B-51DA-6112-4D77-B2099572DA4E"/>
+</associations>
+</Column>
+<Column name="Zug_Zugnummer" id="05CE6EFC-2F81-2ACF-C486-4E359A646AA7">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>36A220E7-5E8C-4E0B-32C9-B6E0ADDB61A6</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="02BB3316-6F8A-0F42-55DB-AE74E799D4A0" referredColumn="D33662DC-274C-9912-26DA-377C9C42369E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="01CE45D5-078F-1C9F-360B-CE72760FB80E" name="Wagon_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>F78C1164-65C8-46E7-078F-C99A43BADBF1</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05CE6EFC-2F81-2ACF-C486-4E359A646AA7"/>
+<colUsage columnID="BBB0373E-99D5-DB06-2D1F-1794137E885F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E07152B4-D4C7-1700-E862-5333C75CBD80" name="Wagon_Wagontyp_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>1B276661-235C-8B3F-26FB-37BB45204A58</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF0DC32E-CB15-70D3-C430-139A62381958"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="65C36365-92E4-2515-6969-2A60A8ADA733" name="Wagon_Klasse_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>0F026EAA-3FED-A8B7-83AA-183B6E9F3967</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1F368F0-7F84-AEFC-2077-220F7EFD57F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1B00905C-0380-3F91-EAD7-52F7A39CACFC" name="Wagon_Zug_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>183CD8DA-16DE-BE56-0F36-1F370004E5BA</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05CE6EFC-2F81-2ACF-C486-4E359A646AA7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

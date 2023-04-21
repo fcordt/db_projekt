@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="ADCD94EE-78E0-6CFC-5DF0-118E6766EC26" containerWithKeyObject="D7AAD6D4-987F-6F51-8CE8-93ECB3B20B81" localFKIndex="067A0946-4A48-4EC0-4872-5E42CD2AAA50" name="Einzelticket_mit_SPR_Sitzplatz_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>72777CC8-AD39-E107-0BC8-EEC3D5BF7DD1</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<referredTableLongName>Sitzplatz</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E7619B13-AB97-582C-2751-CAE0A53CB76C</referredTableID>
+<keyObject>D7278F9E-CF01-4919-39A1-2111C288B461</keyObject>
+<referredKeyID>D7278F9E-CF01-4919-39A1-2111C288B461</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Wagon_Zugnummer,Wagon_Reihenfolge,Sitzplatznummer</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

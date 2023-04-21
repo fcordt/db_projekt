@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ADC6AFBA-2362-4DD8-1555-B5BFE062C890" name="Kundin">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>0D79E7FC-9240-F5F5-7568-92BEE0481178</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Vorname" id="0648D7F8-E02A-0321-643F-B9479B31D970">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>BF9C922F-6488-9B67-2CBC-F2AD7307698A</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nachname" id="3C7A6931-FCE2-2EAA-33A7-8179E9EDC7A3">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>74FE62D7-9E73-A10B-CC44-71D671AB0F2E</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kundennummer" id="0784D7E6-7AAA-B6ED-FA9C-910E065BC863">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>7CE55EA3-3D38-DF3D-1E8E-D10136D86DFB</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Adresse" id="5484CB07-06F3-FC11-4A86-D6DCED61767A">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>B8B3780E-0B21-4D0C-CFB9-9AA2010E13D7</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ort_PLZ" id="A628242F-548D-621D-F191-84BC6E9C5581">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>6D949883-B084-BF55-3596-92145820E6E0</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9C718F3A-2CDF-E51C-522A-CE36648834C6" referredColumn="D9DBCDF5-B57B-C36B-7A86-19C49821D37C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="53D70C44-5E7B-AAC9-5D49-F99483EAAD31" name="Kundin_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>E3765B44-3C74-CC1B-4041-25D07C4BE7F2</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0784D7E6-7AAA-B6ED-FA9C-910E065BC863"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B292DE9-26D7-2EFA-9D69-ABFC81ACB637" name="Kundin_Ort_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>3352918F-A69F-89DD-FD1D-5C2AB8E91E11</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A628242F-548D-621D-F191-84BC6E9C5581"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1AE9E2ED-A1DC-61EF-5E94-B9C4B2F12F82" name="Bahnsteig">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>83E4BF98-A248-E7E1-471B-C5AAABD5C3BF</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Nr" id="65AA0C4C-4F25-7250-9121-3B12B2EBA054">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>66E2A174-3009-DEA6-EBCC-5FDD3A1CC2A7</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Bahnhof_Name" id="C0005207-0110-8927-0615-2B83F5BE54AD">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>40B65154-6971-0D73-F939-91B8B7DA43EA</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C8155E24-22B2-69B1-145C-19A62BDCF460" referredColumn="1BA84309-3EFE-0936-C3C1-1498ED86EDF4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7D51E128-891C-5252-883A-C52BA7685F13" name="Bahnsteig_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>3F0CCCA6-6DF8-A4CD-5262-24192606CB15</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0005207-0110-8927-0615-2B83F5BE54AD"/>
+<colUsage columnID="65AA0C4C-4F25-7250-9121-3B12B2EBA054"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="945F27B6-026F-B28F-FE01-59FCD82F1EC8" name="Bahnsteig_Bahnhof_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>BB2D8E62-D569-959F-8C81-A12F68798244</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0005207-0110-8927-0615-2B83F5BE54AD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

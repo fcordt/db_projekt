@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3A2F71F0-A827-9D30-7A0C-FCBAD168B450" containerWithKeyObject="D7AAD6D4-987F-6F51-8CE8-93ECB3B20B81" localFKIndex="F3663C65-03C3-8E2D-9216-46362A29C889" name="Einzelticket_mit_SPR_Einzelticket_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>89583F43-8941-96E2-F373-641C79B83CD4</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<referredTableLongName>Einzelticket</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D97AC71F-FC4F-662B-5FDA-7773B812908F</referredTableID>
+<keyObject>F4E8FC8B-49A9-04B5-B431-538FBC0DB706</keyObject>
+<referredKeyID>F4E8FC8B-49A9-04B5-B431-538FBC0DB706</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Ticketnummer</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<discriminatorColumn>D5D78D38-0296-D519-530A-2807A4857F35</discriminatorColumn>
+<discriminatorValue>EINZELTICKET_MIT_SPR</discriminatorValue>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

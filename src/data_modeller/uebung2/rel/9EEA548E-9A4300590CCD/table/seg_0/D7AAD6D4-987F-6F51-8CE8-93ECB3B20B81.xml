@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D7AAD6D4-987F-6F51-8CE8-93ECB3B20B81" name="Einzelticket_mit_SPR">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>B91B111C-CB9B-883E-9E89-8DA465236871</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Ticketnummer" id="910EE0F7-C42F-3C5A-948B-C97B6EBD4EFD">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>DCED47D8-7206-FC08-B77B-88E9594A4A1C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3A2F71F0-A827-9D30-7A0C-FCBAD168B450" referredColumn="3AD5E801-0C64-45E1-1BF1-0689B36DE65C"/>
+</associations>
+</Column>
+<Column name="Sitzplatz_Wagon_Zugnummer" id="70398DCD-23E9-6F60-E934-DAD71ABA83AE">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>67764A1D-6E4F-95AC-5DAA-A622C592C167</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ADCD94EE-78E0-6CFC-5DF0-118E6766EC26" referredColumn="07205715-4D58-3337-87F0-B6E01B94C94D"/>
+</associations>
+</Column>
+<Column name="Sitzplatz_Wagon_Reihenfolge" id="8E3DEE77-0D01-1CA8-CCDF-39156D193F54">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>A6FD6ED1-906D-2251-66F5-0B9E5C40A73B</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ADCD94EE-78E0-6CFC-5DF0-118E6766EC26" referredColumn="5C420E44-D06D-367A-A74C-52788B377EDF"/>
+</associations>
+</Column>
+<Column name="Sitzplatz_Sitzplatznummer" id="C6357549-BFEC-4674-511C-E2ACAE74FA4C">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>5C3BA3DC-68CC-4899-9209-29B9CA5902E9</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ADCD94EE-78E0-6CFC-5DF0-118E6766EC26" referredColumn="79ADE164-5F80-9899-5EDD-796DD78ABA02"/>
+</associations>
+</Column>
+<Column name="Einzelticket_mit_SPR_TYPE" id="6FBA7B37-6D6C-0F30-D853-39E896562DC8">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<constraintName>CH_INH_Einzelticket_mit_SPR</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<listOfValues>
+<valueDef value="EINZELTICKET_MIT_SPR" description="entity Einzelticket mit SPR"/>
+</listOfValues>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isDiscriminatorColumn>true</isDiscriminatorColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5E056E76-8280-CB82-5C39-D8A5B3BE47B5" name="Einzelticket_mit_SPR_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>C38843FA-83AA-66B5-DE17-EC8FEB1EEA0C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="910EE0F7-C42F-3C5A-948B-C97B6EBD4EFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F3663C65-03C3-8E2D-9216-46362A29C889" name="Einzelticket_mit_SPR_Einzelticket_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>89583F43-8941-96E2-F373-641C79B83CD4</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="910EE0F7-C42F-3C5A-948B-C97B6EBD4EFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="067A0946-4A48-4EC0-4872-5E42CD2AAA50" name="Einzelticket_mit_SPR_Sitzplatz_FK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>72777CC8-AD39-E107-0BC8-EEC3D5BF7DD1</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70398DCD-23E9-6F60-E934-DAD71ABA83AE"/>
+<colUsage columnID="8E3DEE77-0D01-1CA8-CCDF-39156D193F54"/>
+<colUsage columnID="C6357549-BFEC-4674-511C-E2ACAE74FA4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

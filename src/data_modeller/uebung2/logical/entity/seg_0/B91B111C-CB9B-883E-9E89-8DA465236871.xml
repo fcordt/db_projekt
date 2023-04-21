@@ -1,11 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B91B111C-CB9B-883E-9E89-8DA465236871" name="Einzelfahrt mit SPR">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B91B111C-CB9B-883E-9E89-8DA465236871" name="Einzelticket mit SPR">
 <createdBy>fcord</createdBy>
 <createdTime>2023-03-25 09:50:39 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
-<engineerTo>
-<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -15,50 +12,44 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<generateDiscrimColumn>true</generateDiscrimColumn>
+<discriminatorValue>EINZELTICKET_MIT_SPR</discriminatorValue>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Zugnummer" id="67764A1D-6E4F-95AC-5DAA-A622C592C167">
 <createdBy>fcord</createdBy>
 <createdTime>2023-04-14 11:54:28 UTC</createdTime>
 <generatorID>72777CC8-AD39-E107-0BC8-EEC3D5BF7DD1</generatorID>
 <ownerDesignName>uebung2</ownerDesignName>
-<engineerTo>
-<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
-</engineerTo>
 <referedAttribute>44B2AE0C-A431-B612-8CDB-A90381663BD8</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Reihenfolge" id="A6FD6ED1-906D-2251-66F5-0B9E5C40A73B">
 <createdBy>fcord</createdBy>
 <createdTime>2023-04-14 11:54:28 UTC</createdTime>
 <generatorID>72777CC8-AD39-E107-0BC8-EEC3D5BF7DD1</generatorID>
 <ownerDesignName>uebung2</ownerDesignName>
-<engineerTo>
-<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
-</engineerTo>
 <referedAttribute>E5CC38FE-6A19-7573-4785-1D6EDA7863D4</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Sitzplatznummer" id="5C3BA3DC-68CC-4899-9209-29B9CA5902E9">
 <createdBy>fcord</createdBy>
 <createdTime>2023-04-14 11:54:28 UTC</createdTime>
 <generatorID>72777CC8-AD39-E107-0BC8-EEC3D5BF7DD1</generatorID>
 <ownerDesignName>uebung2</ownerDesignName>
-<engineerTo>
-<item key="DB6D9FE9-EB28-5897-B0C6-FDB58F24EA93" value="true"/>
-</engineerTo>
 <referedAttribute>19637C69-7241-D5F9-30D2-FBCEDCB82F9E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>2</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8480E54C-9F06-1CB8-4465-F77FCA6DEBDC" name="Ticket">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>3047AF29-C196-D051-D031-843FF039B79B</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Ticketnummer" id="9AFE6BFD-D77D-061A-6426-A24BB701CA45">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>DCED47D8-7206-FC08-B77B-88E9594A4A1C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Gültigkeitsdatum" id="BB498638-F845-2BC6-2A95-49C358AE1E5C">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>2EB86CD4-ABBF-253D-9139-381CAA09EA4F</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ticket_typ" id="37CF81CB-1999-AB82-B167-B119DBF03B64">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<ownerDesignName>uebung2</ownerDesignName>
+<constraintName>CH_INH_Ticket</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<listOfValues>
+<valueDef value="DAUERTICKET" description="entity Dauerticket"/>
+<valueDef value="EINZELTICKET" description="entity Einzelticket"/>
+<valueDef value="EINZELTICKET_MIT_SPR" description="entity Einzelticket mit SPR"/>
+<valueDef value="TICKET" description="entity Ticket"/>
+</listOfValues>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isDiscriminatorColumn>true</isDiscriminatorColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="275854B5-B3DD-BC6E-FEAB-8B788F46B6B0" name="Ticket_PK">
+<createdBy>fcord</createdBy>
+<createdTime>2023-04-21 13:31:17 UTC</createdTime>
+<generatorID>C38843FA-83AA-66B5-DE17-EC8FEB1EEA0C</generatorID>
+<ownerDesignName>uebung2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9AFE6BFD-D77D-061A-6426-A24BB701CA45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

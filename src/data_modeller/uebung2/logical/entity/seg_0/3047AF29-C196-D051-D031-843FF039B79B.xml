@@ -3,9 +3,6 @@
 <createdBy>fcord</createdBy>
 <createdTime>2023-03-25 09:45:19 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
-<engineerTo>
-<item key="7210342F-EEC2-BEA9-3EFF-B824D7B9CF88" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -14,14 +11,14 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<generateDiscrimColumn>true</generateDiscrimColumn>
+<discriminatorColumnName>ticket_typ</discriminatorColumnName>
+<discriminatorValue>TICKET</discriminatorValue>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="Ticketnummer" id="DCED47D8-7206-FC08-B77B-88E9594A4A1C">
 <createdBy>fcord</createdBy>
 <createdTime>2023-03-25 09:45:27 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
-<engineerTo>
-<item key="7210342F-EEC2-BEA9-3EFF-B824D7B9CF88" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -31,9 +28,6 @@
 <createdBy>fcord</createdBy>
 <createdTime>2023-03-25 09:45:47 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
-<engineerTo>
-<item key="7210342F-EEC2-BEA9-3EFF-B824D7B9CF88" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -45,10 +39,6 @@
 <createdBy>fcord</createdBy>
 <createdTime>2023-03-25 09:45:38 UTC</createdTime>
 <ownerDesignName>uebung2</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
-<engineerTo>
-<item key="7210342F-EEC2-BEA9-3EFF-B824D7B9CF88" value="false"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>DCED47D8-7206-FC08-B77B-88E9594A4A1C</attributeRef>
