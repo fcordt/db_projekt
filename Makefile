@@ -7,7 +7,7 @@ pwd = $(shell pwd)
 db_data_path = $(pwd)/oracle-19c/
 
 .PHONY: create_db
-initialize_db:
+create_db:
 	mkdir -p $(db_data_path)/oradata
 	sudo chown -R 54321:54321 $(db_data_path)
 	sudo docker run --name $(docker_name) \
@@ -42,7 +42,7 @@ remove_db:
 	sudo rm -R $(db_data_path)
 	
 .PHONY: recreate_db
-reinitialize_db:
+recreate_db:
 	make remove_db
 	make create_db
 
