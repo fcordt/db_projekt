@@ -6,7 +6,7 @@ docker_name = db_uebung_ora_19c
 pwd = $(shell pwd)
 db_data_path = $(pwd)/oracle-19c/
 
-.PHONY: initialize_db
+.PHONY: create_db
 initialize_db:
 	mkdir -p $(db_data_path)/oradata
 	sudo chown -R 54321:54321 $(db_data_path)
@@ -17,11 +17,15 @@ initialize_db:
 	-e ORACLE_CHARACTERSET=UTF8 \
 	-v $(db_data_path)/oradata/:/opt/oracle/oradata \
 	-d doctorkirk/oracle-19c
-	make create_user
 
 .PHONY: start_db
 start_db:
 	sudo docker start $(docker_name)
+
+.PHONY: initialize_db
+initialize_db:
+	make create_user
+	make migrate_db
 
 .PHONY: create_user
 create_user:
@@ -37,10 +41,10 @@ remove_db:
 	sudo docker rm $(docker_name) || true
 	sudo rm -R $(db_data_path)
 	
-.PHONY: reinitialize_db
+.PHONY: recreate_db
 reinitialize_db:
 	make remove_db
-	make initialize_db
+	make create_db
 
 .PHONY: migrate_db
 migrate_db:
