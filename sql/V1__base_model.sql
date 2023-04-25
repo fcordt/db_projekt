@@ -55,12 +55,12 @@ CREATE TABLE dauertyp (
 ALTER TABLE dauertyp ADD CONSTRAINT dauertyp_pk PRIMARY KEY ( id );
 
 CREATE TABLE einzelticket (
-    ticketnummer           NUMBER NOT NULL,
-    bahnsteig_name         VARCHAR2(100) NOT NULL,
-    bahnsteig_nr           NUMBER(2) NOT NULL,
-    bahnsteig_bahnhof_name VARCHAR2(100) NOT NULL,
-    bahnsteig_nr2          NUMBER(2) NOT NULL,
-    einzelticket_type      VARCHAR2(20) NOT NULL
+    ticketnummer            NUMBER NOT NULL,
+    abfahrt_bahnhof_name    VARCHAR2(100) NOT NULL,
+    abfahrt_bahnsteig_nr    NUMBER(2) NOT NULL,
+    ankunft_bahnhof_name    VARCHAR2(100) NOT NULL,
+    ankunft_bahnsteig_nr    NUMBER(2) NOT NULL,
+    einzelticket_type       VARCHAR2(20) NOT NULL
 );
 
 ALTER TABLE einzelticket
@@ -170,13 +170,13 @@ ALTER TABLE sitzplatz
                                               sitzplatznummer );
 
 CREATE TABLE streckenabschnitt (
-    abfahrtszeit    TIMESTAMP WITH LOCAL TIME ZONE NOT NULL,
-    ankunftszeit    TIMESTAMP WITH LOCAL TIME ZONE NOT NULL,
-    fahrplan_nr     NUMBER(10) NOT NULL,
-    bahnsteig_nr2   NUMBER(2) NOT NULL,
-    bahnsteig_nr    NUMBER(2) NOT NULL,
-    bahnsteig_name2 VARCHAR2(100) NOT NULL,
-    bahnsteig_name  VARCHAR2(100) NOT NULL
+    abfahrtszeit            TIMESTAMP WITH LOCAL TIME ZONE NOT NULL,
+    ankunftszeit            TIMESTAMP WITH LOCAL TIME ZONE NOT NULL,
+    fahrplan_nr             NUMBER(10) NOT NULL,
+    abfahrt_bahnsteig_nr    NUMBER(2) NOT NULL,
+    ankunft_bahnsteig_nr    NUMBER(2) NOT NULL,
+    abfahrt_bahnhof_name    VARCHAR2(100) NOT NULL,
+    ankunft_bahnhof_name    VARCHAR2(100) NOT NULL
 );
 
 ALTER TABLE streckenabschnitt ADD CONSTRAINT streckenabschnitt_pk PRIMARY KEY ( abfahrtszeit,
@@ -249,14 +249,15 @@ ALTER TABLE dauerticketpreis
         REFERENCES dauertyp ( id );
 
 ALTER TABLE einzelticket
-    ADD CONSTRAINT einzelticket_bahnsteig_fk FOREIGN KEY ( bahnsteig_name,
-                                                           bahnsteig_nr )
+    ADD CONSTRAINT einzelticket_abfahrt_bahnsteig_fk FOREIGN KEY ( abfahrt_bahnhof_name,
+                                                           abfahrt_bahnsteig_nr )
         REFERENCES bahnsteig ( bahnhof_name,
                                nr );
 
+
 ALTER TABLE einzelticket
-    ADD CONSTRAINT einzelticket_bahnsteig_fkv2 FOREIGN KEY ( bahnsteig_bahnhof_name,
-                                                             bahnsteig_nr2 )
+    ADD CONSTRAINT einzelticket_ankunft_bahnsteig_fk FOREIGN KEY ( ankunft_bahnhof_name,
+                                                             ankunft_bahnsteig_nr )
         REFERENCES bahnsteig ( bahnhof_name,
                                nr );
 
@@ -307,14 +308,14 @@ ALTER TABLE sitzplatz
                            reihenfolge );
 
 ALTER TABLE streckenabschnitt
-    ADD CONSTRAINT streckenabschnitt_bahnsteig_fk FOREIGN KEY ( bahnsteig_name,
-                                                                bahnsteig_nr )
+    ADD CONSTRAINT streckenabschnitt_abfahrt_bahnsteig_fk FOREIGN KEY ( abfahrt_bahnhof_name,
+                                                                abfahrt_bahnsteig_nr )
         REFERENCES bahnsteig ( bahnhof_name,
                                nr );
 
 ALTER TABLE streckenabschnitt
-    ADD CONSTRAINT streckenabschnitt_bahnsteig_fkv2 FOREIGN KEY ( bahnsteig_name2,
-                                                                  bahnsteig_nr2 )
+    ADD CONSTRAINT streckenabschnitt_ankunft_bahnsteig_fk FOREIGN KEY ( ankunft_bahnhof_name,
+                                                                  ankunft_bahnsteig_nr )
         REFERENCES bahnsteig ( bahnhof_name,
                                nr );
 
