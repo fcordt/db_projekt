@@ -29,7 +29,7 @@ initialize_db:
 
 .PHONY: create_user
 create_user:
-	./scripts/create_user.sh $(db_pw) $(db_sid) $(user_name) $(user_pw)
+	echo "@./scripts/create_user.sql $(user_name) $(user_pw)" | sqlplus system/$(db_pw)@//127.0.0.1:1521/$(db_sid)
 
 .PHONY: stop_db
 stop_db:
