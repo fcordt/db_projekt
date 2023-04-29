@@ -39,7 +39,7 @@ stop_db:
 remove_db:
 	make stop_db
 	sudo docker rm $(docker_name) || true
-	sudo rm -R $(db_data_path)
+	sudo rm -rf $(db_data_path)
 	
 .PHONY: recreate_db
 recreate_db:
