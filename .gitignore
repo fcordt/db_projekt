@@ -27,3 +27,4 @@ main.pdf
 *.run.xml
 *.fls
 *.fdb_latexmk
+*.pyc

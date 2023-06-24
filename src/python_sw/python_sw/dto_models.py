@@ -27,3 +27,13 @@ class BahnsteigFahrtDTO(BaseModel):
 class FahplanStopDTO(BaseModel):
     abfahrt: Optional[BahnsteigFahrtDTO]
     ankunft: Optional[BahnsteigFahrtDTO]
+
+class UserDTO(BaseModel):
+    class Config:
+        orm_mode = True
+    vorname: str
+    nachname: str
+    kundennummer: str
+    adresse: str
+    plz: str
+    ort: str

@@ -6,6 +6,7 @@ class DbService:
         self.connection = oracledb.connect(
             dsn="127.0.0.1/dbuebung", user="dbuser", password="test"
         )
+        self.connection.autocommit = True
         return self.connection
 
     def __exit__(self, exc_type, exc_value, traceback):

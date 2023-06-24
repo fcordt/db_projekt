@@ -11,16 +11,29 @@ class FahrplanService:
         self._connection = connection
 
     def get_fahrplaene(
-        self, von: datetime = datetime(1991, 1, 1), bis: datetime = datetime(9999, 1, 1)
+        self, abfahrt_bahnhof: str = None, ankunft_bahnhof: str = None, von: datetime = datetime(1991, 1, 1), bis: datetime = datetime(9999, 1, 1)
     ):
+        query = "SELECT DISTINCT NR, NAME, VON_DATUM, BIS_DATUM FROM DBUSER.FAHRPLAN"
+        if abfahrt_bahnhof is not None or ankunft_bahnhof is not None:
+            query += " INNER JOIN DBUSER.STRECKENABSCHNITT ON FAHRPLAN_NR = NR"
+
+        query += " WHERE VON_DATUM < :bis_date AND BIS_DATUM > :von_date"
+        bvars = [bis, von]
+        if abfahrt_bahnhof is not None:
+            bvars.append(abfahrt_bahnhof)
+            query += " AND ABFAHRT_BAHNHOF_NAME = :abbf"
+        if ankunft_bahnhof is not None:
+            bvars.append(ankunft_bahnhof)
+            query += " AND ANKUNFT_BAHNHOF_NAME = :anbf"
+        #todo (oder eher nicht): Ankunftsbahnhof > abfahrtsbahnhof
+
         with self._connection.cursor() as cursor:
             return list(
                 map(
                     lambda x: FahrplanDTO(nr=x[0], name=x[1], von=x[2], bis=x[3]),
                     cursor.execute(
-                        "SELECT NR, Name, VON_DATUM, BIS_DATUM FROM FAHRPLAN WHERE VON_DATUM < :bis_date AND BIS_DATUM > :von_date",
-                        von_date=von,
-                        bis_date=bis,
+                        query,
+                        bvars
                     ),
                 )
             )
