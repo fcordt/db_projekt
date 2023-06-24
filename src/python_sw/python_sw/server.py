@@ -12,11 +12,11 @@ def get_bahnhof(name: Optional[str] = "", bahnhof_service: BahnhofService = Depe
     return bahnhof_service.get_stations(name)
 
 
-@app.get("/api/v1/schedule")
+@app.get("/api/v1/schedules")
 def get_fahrplan(fahrplan_service: FahrplanService = Depends()):
     return fahrplan_service.get_fahrplaene()
 
 
-@app.get("/api/v1/schedule/{nr}")
+@app.get("/api/v1/schedules/{nr}")
 def get_fahrplan(nr: int, fahrplan_service: FahrplanService = Depends()):
     return fahrplan_service.get_fahrplan_details(nr)

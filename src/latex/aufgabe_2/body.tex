@@ -25,12 +25,52 @@ Es folgt eine kurze Beschreibung der wichtigsten Entitätsgruppen und Beziehunge
     \item[Preis] Die verschiedenen Preise (``Preis je Haltestelle'', ``Dauerticketpreis'', ``Einzelticketpreis'' und ``Reservierungsaufschlag'') 
     sind mit den relevanten Tabellen verknüpft. Zusätzlich hat jeder Preis ein Gültigkeitsdatum (``von'', ``bis''). 
     Damit können Preiserhöhungen schon im Vorfeld in das Datenmodell eingetragen werden, und haben erst ab einem bestimmten Tag eine Auswirkung auf die Ticketpreise.
-
 \end{description}
 \begin{figure}[h]
     \caption{Logisches Modell}
     \centering
     \includegraphics[width=1\textwidth]{logical}
-    \end{figure}
+\end{figure}\label{diagramm}
 \section{Diagramm}
 \label{section:Diagramm}
+
+In \ref{diagramm} ist das logische Modell zusehen, in \ref{sec:ddl} ist das SQL Script zu sehen, dass zur Erstellung
+des Datenmodells in der Datenbank benutzt wurde. Es fehlen noch die Sequenzes für gewisse
+Tabellen (im Speziellen \texttt{TICKET.TICKERNUMMER}, und \texttt{KUNDIN.KUNDENNUMMER}.)
+\section{Befüllen der Datensätze}
+Das Befüllen der Datensätze war vor allem Zeitaufwendig. Während es für Orte und Postleitzahlen
+im Internet genug Auflistungen gibt, und aus diesen automatisiert SQL-Scripts generiert werden
+konnten (\ref{sec:dml}), war die Befüllung von bahnspezifischen Informationen umständlich, und wurde
+zum Großteil manuell gemacht.
+
+\section{Anfragen an das System}
+\subsection{Verbal}
+Es folgen beispielhafte Anfragen an das System, wobei die betroffenen Tabellen in Großbuchstaben und Verbatim geschrieben werden.
+
+\begin{itemize}
+    \item Alle Bahnhöfe (\texttt{BAHNHOF}), dessen Name ein gewisses Format hat.
+    \item Alle Halte (\texttt{BAHNHOF}, \texttt{BAHNSTEIG}) eines Zuges (\texttt{ZUG}), der einen gewissen Fahrplan
+    hat (\texttt{FAHRPLAN}).
+    \item Alle Halte (\texttt{BAHNHOF}, \texttt{BAHNSTEIG}), und dessen Uhrzeit (\texttt{STRECKENABSCHNITT})
+    jener Fahrpläne (\texttt{FAHRPLAN}) die von Bahnhof A (\texttt{BAHNHOF}) nach Bahnhof B (\texttt{BAHNHOF})
+    fahren.
+\end{itemize}
+
+\begin{appendices}
+\section{DDL}\label{sec:ddl}
+\lstinputlisting[language=SQL,label={Script zur Generierung der DB}]{../../../sql/V1__base_model.sql}
+\lstinputlisting[language=SQL,label={Script zur Anpassung der Bahnhof-Tabelle}]{../../../sql/V2__bahnhof_adresse.sql}
+
+\section{DML}\label{sec:dml}
+\lstinputlisting[language=SQL,label={Script zum Einfügen aller Orte Österreichs}]{../../../sql/V3.1__insert_ort.sql}
+\lstinputlisting[language=SQL,label={Script zum Einfügen gewisser Bahnhöfe}]{../../../sql/V3.2__insert_bahnhof.sql}
+\lstinputlisting[language=SQL,label={Script zum Einfügen der Bahnsteige}]{../../../sql/V3.3__insert_bahnsteige.sql}
+\lstinputlisting[language=SQL,label={Script zum Einfügen der Klassen}]{../../../sql/V3.4__insert_klasse.sql}
+\lstinputlisting[language=SQL,label={Script zum Einfügen der Dauertypen}]{../../../sql/V3.5__insert_dauertyp.sql}
+\lstinputlisting[language=SQL,label={Script zum Einfügen der Zugtypen}]{../../../sql/V3.6__insert_zugtyp.sql}
+\lstinputlisting[language=SQL,label={Script zum Einfügen der Ticketpreise}]{../../../sql/V3.7__insert_ticketpreise.sql}
+\lstinputlisting[language=SQL,label={Script zum Einfügen der Züge}]{../../../sql/V3.8__insert_zug.sql}
+\lstinputlisting[language=SQL,label={Script zum Einfügen der Fahrpläne}]{../../../sql/V3.9__insert_fahrplan.sql}
+
+
+\end{appendices}
