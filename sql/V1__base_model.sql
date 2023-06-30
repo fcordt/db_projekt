@@ -170,6 +170,7 @@ ALTER TABLE sitzplatz
                                               sitzplatznummer );
 
 CREATE TABLE streckenabschnitt (
+    id                      NUMBER NOT NULL,
     abfahrtszeit            TIMESTAMP WITH LOCAL TIME ZONE NOT NULL,
     ankunftszeit            TIMESTAMP WITH LOCAL TIME ZONE NOT NULL,
     fahrplan_nr             NUMBER(10) NOT NULL,
@@ -179,8 +180,20 @@ CREATE TABLE streckenabschnitt (
     ankunft_bahnhof_name    VARCHAR2(100) NOT NULL
 );
 
-ALTER TABLE streckenabschnitt ADD CONSTRAINT streckenabschnitt_pk PRIMARY KEY ( abfahrtszeit,
-                                                                                fahrplan_nr );
+ALTER TABLE streckenabschnitt ADD CONSTRAINT streckenabschnitt_pk PRIMARY KEY ( id );
+
+CREATE SEQUENCE streckenabschnitt_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER streckenabschnitt_insert 
+BEFORE INSERT ON streckenabschnitt 
+FOR EACH ROW
+
+BEGIN
+  SELECT streckenabschnitt_seq.NEXTVAL
+  INTO   :new.id
+  FROM   dual;
+END;
+/
 
 CREATE TABLE ticket (
     ticketnummer     NUMBER NOT NULL,

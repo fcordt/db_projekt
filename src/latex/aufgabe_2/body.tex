@@ -56,6 +56,162 @@ Es folgen beispielhafte Anfragen an das System, wobei die betroffenen Tabellen i
     fahren.
 \end{itemize}
 
+\section{Anwendungsfälle} \label{sec:awf}
+Hier werden drei Anwendungsfälle in Metasprache mit den dazugehörigen Datenbankoperationen beschrieben. Auf die technische Sicht wird in \ref{sec:app} genauer eingegangen.
+\subsection{Fahrplanänderung}
+\begin{enumerate}
+    \item Der Benutzer wählt einen bestehenden Fahrplan aus, den er ändern möchte.
+        \begin{description}
+            \item[Datenbankoperationen] Suche nach dem entsprechenden Fahrplan basierend auf der FahrplanID. 
+        \end{description}
+    \item Das System zeigt dem Benutzer die Details des ausgewählten Fahrplans an.
+        \begin{description}
+            \item[Datenbankoperationen] Abruf der Fahrplandetails aus der Datenbank.
+        \end{description}
+    \item Der Benutzer bearbeitet einen oder mehrere Streckenabschnitte des Fahrplans.
+        \begin{description}
+            \item[Datenbankoperationen] Aktualisierung der Streckenabschnittdaten in der
+            Datenbank.
+        \end{description}
+    \item Das System überprüft die Validität der Änderungen.
+        \begin{description}
+            \item[Datenbankoperationen] Keine direkte Datenbankoperation, sondern Validierungen auf der
+            Anwendungsebene.            
+        \end{description}
+    \item Wenn die Änderungen gültig sind, aktualisiert das System den Fahrplan.
+        \begin{description}
+            \item[Datenbankoperationen] Aktualisierung des Fahrplandatensatzes in der
+            Datenbank.                        
+        \end{description}
+    \item Das System zeigt dem Benutzer die aktualisierten Details des Fahrplans an.
+        \begin{description}
+            \item[Datenbankoperationen] Abruf der aktualisierten Fahrplandetails aus der
+            Datenbank.                        
+        \end{description}
+\end{enumerate}
+\subsection{Kundenverwaltung}
+\begin{enumerate}
+    \item Der Benutzer öffnet die Kund:innenverwaltung im System
+        \begin{description}
+            \item[Datenbankoperationen] Keine direkte Datenbankoperation, sondern Öffnen der
+            Kundenverwaltungsoberfläche.
+        \end{description}
+    \item Das System zeigt dem Benutzer eine Liste der vorhandenen Kunden an.
+        \begin{description}
+            \item[Datenbankoperationen] Abruf der Kundenliste aus der Datenbank.
+        \end{description}
+    \item Der Benutzer sucht nach bestimmten Kunden.
+        \begin{description}
+            \item[Datenbankoperationen] Keine direkte Datenbankoperation, sondern Filterung der Kundenliste auf der
+            Anwendungsebene, basierend auf den Suchkriterien.            
+        \end{description}
+    \item Das System filtert die Kundenliste basierend auf den Suchkriterien und zeigt die
+    entsprechenden Ergebnisse an.
+        \begin{description}
+            \item[Datenbankoperationen] Abruf der gefilterten Kundenliste aus der Datenbank.
+        \end{description}
+    \item Der Benutzer wählt einen Kunden aus der Liste aus.
+        \begin{description}
+            \item[Datenbankoperationen] Keine direkte Datenbankoperation, sondern Auswahl der entsprechenden
+            Kund:in.                    
+        \end{description}
+    \item Das System zeigt dem Benutzer die Details des ausgewählten Kunden an.
+        \begin{description}
+            \item[Datenbankoperationen] Abruf der Kundendetails aus der Datenbank.                        
+        \end{description}
+    \item Der Benutzer bearbeitet die Details des Kunden und speichert die Änderungen.
+        \begin{description}
+            \item[Datenbankoperationen] Aktualisierung der Kundendaten in der Datenbank.                        
+        \end{description}
+    \item Das System aktualisiert die Kundendaten.
+        \begin{description}
+            \item[Datenbankoperationen] Aktualisierung des Kundendatensatzes in der
+            Datenbank.                        
+        \end{description}
+    \item Das System zeigt dem Benutzer die aktualisierten Details der Kund:in an.
+        \begin{description}
+            \item[Datenbankoperationen] Abruf der aktualisierten Kundendetails aus der
+            Datenbank.                                    
+        \end{description}
+\end{enumerate}
+\subsection{Ticketkauf}
+\begin{enumerate}
+    \item Der Benutzer wählt die Art des Tickets aus (Anonyme Einzelfahrt, Einzelfahrt mit
+    Sitzplatzreservierung, Personenbezogenes Dauerticket) und gibt gegebenenfalls
+    weitere Details an, wie die gewünschte Strecke und das Gültigkeitsdatum.
+        \begin{description}
+            \item[Datenbankoperationen] Keine direkte Datenbankoperation, sondern Erfassung
+            der Auswahl und Details auf der Anwendungsebene.
+        \end{description}
+    \item Das System zeigt dem Benutzer den Preis für das ausgewählte Ticket basierend auf
+    den berechneten Preisen an.
+        \begin{description}
+            \item[Datenbankoperationen] Abruf der Preiskalkulation aus der Datenbank basierend
+            auf den Ticketdetails.
+        \end{description}
+    \item Der Benutzer gibt seine persönlichen Informationen (Name, Adresse) ein.
+        \begin{description}
+            \item[Datenbankoperationen] Erfassung der persönlichen Informationen des
+            Benutzers auf der Anwendungsebene.                       
+        \end{description}
+    \item Das System überprüft die Verfügbarkeit des Tickets und reserviert es für den
+    Benutzer.    
+        \begin{description}
+            \item[Datenbankoperationen] Aktualisierung des Ticketdatensatzes in der Datenbank,
+            um die Reservierung zu kennzeichnen.
+        \end{description}
+    \item Das System generiert eine Ticketnummer und zeigt sie dem Benutzer zusammen mit
+    den Details des Tickets (Tickettyp, Strecke, Gültigkeitsdatum, Preis) an.    
+        \begin{description}
+            \item[Datenbankoperationen] Erzeugung eines neuen Datensatzes für das Ticket in
+            der Datenbank.   
+        \end{description}
+    \item Der Benutzer bezahlt das Ticket entweder online oder an einem Schalter.
+        \begin{description}
+            \item[Datenbankoperationen] Aktualisierung des Ticketdatensatzes in der Datenbank,
+            um den Zahlungsstatus zu kennzeichnen.                        
+        \end{description}
+    \item Das System aktualisiert die Kundendaten.
+        \begin{description}
+            \item[Datenbankoperationen] Aktualisierung des Kundendatensatzes in der
+            Datenbank.                        
+        \end{description}
+    \item Das System markiert das Ticket als bezahlt und gültig.
+        \begin{description}
+            \item[Datenbankoperationen]  Aktualisierung des Ticketdatensatzes in der Datenbank,
+            um den Zahlungs- und Gültigkeitsstatus zu aktualisieren.                                    
+        \end{description}
+\end{enumerate}
+
+
+\section{Applikationsbeschreibung} \label{sec:app}
+\subsection{Datenbank}
+Zum Entwickelun wurde eine lokale 19c Datenbank mit Docker erstellt, und es wurden scripts geschrieben, um diese Datenbank automatisch aufzusetzen. 
+Für genauere Informationen im Root-Verzeichnis in das README.md schaueb.
+
+\subsection{Python-Applikation}
+Die Applikation wurde in Pythom mit FastAPI geschrieben.
+Für die oben beschriebenen Anwendungsfälle wurden entsprechende API-Endpoints erstellt.
+Eine User-Interface wurde aufgrund von Zeitmangel nicht erstellt.
+
+Eine Beschreibung, wie die Applikation zu starten ist, befindet sich in dem Source-Code-Verzeichnig in der Datei \texttt{README.md}
+Nachdem der Webserver läuft, kann die API als Swagger-Dokumentation im Browser unter \texttt{http://127.0.0.1:8000/docs} abgerufen werden.
+
+Hier folgt ein kurzer Überblick über manche der implementieren Endpunkte, deren selects, 
+und die Verknüpfung zu den in \ref{sec:awf} beschriebenen Anwendungsfälle.
+
+\subsubsection{Fahrplanänderung}
+
+
+\subsubsection{Kundenverwaltung}
+
+Für die Kundenverwaltung wurde ein komplettes CRUD-Service geschrieben.
+
+Mit der GET methode \texttt{/api/v1/users} kann mit der Kombination mehrerer optionaler Query Parametern 
+(\texttt{vorname}, \texttt{nachname}, \dots) eine Suche nach Benutzern gestartet werden.
+Wenn die Benutzernummer bekannt ist, kann auch ein GET auf \texttt{/api/v1/users/{benutzernummer}} aufgerufen werden.
+Äquivalent sind post, put und delete methoden vorhanden, um Benutzer anzulegen, zu löschen oder zu bearbeiten.
+
 \begin{appendices}
 \section{DDL}\label{sec:ddl}
 \lstinputlisting[language=SQL,label={Script zur Generierung der DB}]{../../../sql/V1__base_model.sql}
