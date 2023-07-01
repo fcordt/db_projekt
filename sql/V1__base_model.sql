@@ -126,7 +126,7 @@ BEFORE INSERT ON kundin
 FOR EACH ROW
 
 BEGIN
-  SELECT LDAP(to_char(kundin_seq.NEXTVAL), 9, '0')
+  SELECT LPAD(to_char(kundin_seq.NEXTVAL), 9, '0')
   INTO   :new.kundennummer
   FROM   dual;
 END;
