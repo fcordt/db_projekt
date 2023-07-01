@@ -200,9 +200,6 @@ Nachdem der Webserver läuft, kann die API als Swagger-Dokumentation im Browser 
 Hier folgt ein kurzer Überblick über manche der implementieren Endpunkte, deren selects, 
 und die Verknüpfung zu den in \ref{sec:awf} beschriebenen Anwendungsfälle.
 
-\subsubsection{Fahrplanänderung}
-
-
 \subsubsection{Kundenverwaltung}
 
 Für die Kundenverwaltung wurde ein komplettes CRUD-Service geschrieben.
@@ -211,6 +208,34 @@ Mit der GET methode \texttt{/api/v1/users} kann mit der Kombination mehrerer opt
 (\texttt{vorname}, \texttt{nachname}, \dots) eine Suche nach Benutzern gestartet werden.
 Wenn die Benutzernummer bekannt ist, kann auch ein GET auf \texttt{/api/v1/users/{benutzernummer}} aufgerufen werden.
 Äquivalent sind post, put und delete methoden vorhanden, um Benutzer anzulegen, zu löschen oder zu bearbeiten.
+
+
+\subsubsection{Fahrplanänderung}
+
+Auch für die Fahrplanänderung wurde ein CRUD-Service geschrieben. Da hier die Detailsätze der Fahrpläne geändert werden, 
+kann man zuerst mittels \texttt{GET /api/v1/stations} Bahnhöft auswählen, bzw nach Namen suchen, 
+danach per \texttt{GET /ap1/v1/schedules} alle gültigen Fahrpläne die zwischen zwei Bahnhöfen fahren suchen,
+und im anschluss die Fahrplandetails (inklusive der IDs) eines bestimmten Fahrplanes mittels \texttt{GET /api/v1/schuedules/{nr}} holen.
+
+Bearbeiten kann man die Details wieder per CRUD, es wurden alle Endpoints implementiert.
+
+\paragraph{SQL Beispiel}
+Das folgende Beispiel zeigt, wie die oben beschriebenen Fahrpläne zwischen zwei Bahnhöfen selektiert werden.
+
+\begin{lstlisting}[language=Python]
+    query = "SELECT DISTINCT NR, NAME, VON_DATUM, BIS_DATUM FROM DBUSER.FAHRPLAN"
+    if abfahrt_bahnhof is not None or ankunft_bahnhof is not None:
+        query += " INNER JOIN DBUSER.STRECKENABSCHNITT ON FAHRPLAN_NR = NR"
+
+    query += " WHERE VON_DATUM < :bis_date AND BIS_DATUM > :von_date"
+    bvars = [bis, von]
+    if abfahrt_bahnhof is not None:
+        bvars.append(abfahrt_bahnhof)
+        query += " AND ABFAHRT_BAHNHOF_NAME = :abbf"
+    if ankunft_bahnhof is not None:
+        bvars.append(ankunft_bahnhof)
+        query += " AND ANKUNFT_BAHNHOF_NAME = :anbf"
+\end{lstlisting}
 
 \begin{appendices}
 \section{DDL}\label{sec:ddl}

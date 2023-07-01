@@ -118,6 +118,20 @@ CREATE TABLE kundin (
 
 ALTER TABLE kundin ADD CONSTRAINT kundin_pk PRIMARY KEY ( kundennummer );
 
+
+CREATE SEQUENCE kundin_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER kundin_insert 
+BEFORE INSERT ON kundin 
+FOR EACH ROW
+
+BEGIN
+  SELECT LDAP(to_char(kundin_seq.NEXTVAL), 9, '0')
+  INTO   :new.kundennummer
+  FROM   dual;
+END;
+/
+
 CREATE TABLE lokomotive ( 
     lokomotiventyp_serienbezeichnung VARCHAR2(100) NOT NULL,
     zug_zugnummer                    NUMBER(10) NOT NULL

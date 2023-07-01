@@ -26,12 +26,12 @@ def get_fahrplan(
 def get_fahrplan(nr: int, fahrplan_service: FahrplanService = Depends()):
     return fahrplan_service.get_fahrplan_details(nr)
 
-@app.delete("/api/v1/schedule-details/{nr}", status_code=200)
-def delete_schedule(nr: int, fahrplan_service: FahrplanService = Depends()):
+@app.delete("/api/v1/schedule-details/{id}", status_code=200)
+def delete_schedule(id: int, fahrplan_service: FahrplanService = Depends()):
     fahrplan_service.delete_fahrplan_detail(nr)
 
 @app.post("/api/v1/schedule-details", status_code=201)
-def post_detail(
+def post_schedult_details(
         fahrplan_nr: int = Body(),
         abfahrt_bahnsteig: Optional[BahnsteigFahrtInsertDTO] = Body(default=None),
         ankunft_bahnsteig: Optional[BahnsteigFahrtInsertDTO] = Body(default=None),
@@ -41,7 +41,7 @@ def post_detail(
         fahrplan_service.insert_fahrplan_detail(fahrplan_nr, abfahrt_bahnsteig, ankunft_bahnsteig)
 
 @app.put("/api/v1/schedule-details/{id}", status_code=200)
-def post_detail(
+def put_schedult_details(
         id: int,
         abfahrt_bahnsteig: Optional[BahnsteigFahrtInsertDTO] = Body(default=None),
         ankunft_bahnsteig: Optional[BahnsteigFahrtInsertDTO] = Body(default=None),
