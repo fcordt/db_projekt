@@ -92,3 +92,9 @@ def post_user(nr: str = Path(),
 @app.get("/api/v1/trains/{nr}")
 def get_zug(nr: int = Path(), zug_service: ZugService = Depends()):
      return zug_service.get_zug(nr)
+
+@app.get("/api/v1/ticket/price")
+def get_preis(fahrplan_nr: int = Query(), wagon_nr: int = Query(), abfahrt_bahnhof: str = Query(), ankunft_bahnhof: str = Query()):
+     pass
+
+@app.post("/api/v1/ticket/reservation")
