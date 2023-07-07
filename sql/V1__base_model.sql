@@ -62,7 +62,7 @@ ALTER TABLE einzelticket ADD CONSTRAINT einzelticket_pk PRIMARY KEY ( ticketnumm
 
 CREATE TABLE einzelticket_mit_spr (
     ticketnummer                NUMBER NOT NULL,
-    bezahldatum                 TIMESTAMP WITH LOCAL TIME ZONE,
+    reservierdatum              TIMESTAMP WITH LOCAL TIME ZONE,
     sitzplatz_wagon_zugnummer   NUMBER(10) NOT NULL,
     sitzplatz_wagon_reihenfolge NUMBER(3) NOT NULL,
     sitzplatz_sitzplatznummer   NUMBER(2) NOT NULL

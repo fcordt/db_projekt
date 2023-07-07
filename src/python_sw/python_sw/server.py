@@ -4,7 +4,8 @@ from python_sw.UserService import UserService
 
 from python_sw.BahnhofService import BahnhofService
 from python_sw.FahplanService import FahrplanService
-from python_sw.dto_models import BahnsteigFahrtDTO, BahnsteigFahrtInsertDTO, FahplanStopDTO, FahrplanDTO, TrainStationDTO, UserDTO
+from python_sw.dto_models import BahnsteigFahrtInsertDTO, FahplanStopDTO, FahrplanDTO, TrainStationDTO, UserDTO
+from python_sw.ZugService import ZugService
 
 app = FastAPI()
 
@@ -87,3 +88,7 @@ def put_user(nr: str = Path(),
 def post_user(nr: str = Path(), 
              user_service: UserService = Depends()):
     user_service.delete_kunde(kundennummer=nr)
+
+@app.get("/api/v1/trains/{nr}")
+def get_zug(nr: int = Path(), zug_service: ZugService = Depends()):
+     return zug_service.get_zug(nr)
