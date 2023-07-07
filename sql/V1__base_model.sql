@@ -29,11 +29,7 @@ CREATE TABLE dauerticket (
     ticketnummer        NUMBER NOT NULL,
     kundin_kundennummer VARCHAR2(9) NOT NULL,
     dauertyp_id         VARCHAR2(10) NOT NULL,
-    dauerticket_type    VARCHAR2(11) NOT NULL
 );
-
-ALTER TABLE dauerticket
-    ADD CONSTRAINT ch_inh_dauerticket CHECK ( dauerticket_type IN ( 'DAUERTICKET' ) );
 
 ALTER TABLE dauerticket ADD CONSTRAINT dauerticket_pk PRIMARY KEY ( ticketnummer );
 
@@ -59,25 +55,18 @@ CREATE TABLE einzelticket (
     abfahrt_bahnhof_name    VARCHAR2(100) NOT NULL,
     abfahrt_bahnsteig_nr    NUMBER(2) NOT NULL,
     ankunft_bahnhof_name    VARCHAR2(100) NOT NULL,
-    ankunft_bahnsteig_nr    NUMBER(2) NOT NULL,
-    einzelticket_type       VARCHAR2(20) NOT NULL
+    ankunft_bahnsteig_nr    NUMBER(2) NOT NULL
 );
-
-ALTER TABLE einzelticket
-    ADD CONSTRAINT ch_inh_einzelticket CHECK ( einzelticket_type IN ( 'EINZELTICKET', 'EINZELTICKET_MIT_SPR' ) );
 
 ALTER TABLE einzelticket ADD CONSTRAINT einzelticket_pk PRIMARY KEY ( ticketnummer );
 
 CREATE TABLE einzelticket_mit_spr (
     ticketnummer                NUMBER NOT NULL,
+    bezahldatum                 TIMESTAMP WITH LOCAL TIME ZONE,
     sitzplatz_wagon_zugnummer   NUMBER(10) NOT NULL,
     sitzplatz_wagon_reihenfolge NUMBER(3) NOT NULL,
-    sitzplatz_sitzplatznummer   NUMBER(2) NOT NULL,
-    einzelticket_mit_spr_type   VARCHAR2(20) NOT NULL
+    sitzplatz_sitzplatznummer   NUMBER(2) NOT NULL
 );
-
-ALTER TABLE einzelticket_mit_spr
-    ADD CONSTRAINT ch_inh_einzelticket_mit_spr CHECK ( einzelticket_mit_spr_type IN ( 'EINZELTICKET_MIT_SPR' ) );
 
 ALTER TABLE einzelticket_mit_spr ADD CONSTRAINT einzelticket_mit_spr_pk PRIMARY KEY ( ticketnummer );
 

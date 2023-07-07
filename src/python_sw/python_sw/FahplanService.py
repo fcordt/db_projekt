@@ -15,7 +15,7 @@ class FahrplanService:
         self, abfahrt_bahnhof: str = None, ankunft_bahnhof: str = None, von: datetime = datetime(1991, 1, 1), bis: datetime = datetime(9999, 1, 1)
     ):
         bvars = []
-        query = "SELECT FP.NR, FP.NAME, FP.VON_DATUM, FP.BIS_DATUM FROM DBUSER.FAHRPLAN FP"
+        query = "SELECT FP.NR, FP.NAME, FP.VON_DATUM, FP.BIS_DATUM, FP.ZUG_ZUGNUMMER FROM DBUSER.FAHRPLAN FP"
         if abfahrt_bahnhof is not None:
             query += " INNER JOIN DBUSER.STRECKENABSCHNITT VSA ON VSA.FAHRPLAN_NR = FP.FAHRPLAN_NR AND VSA.ABFAHRT_BAHNHOF_NAME = :abfbhf"
             bvars.append(abfahrt_bahnhof)
@@ -32,7 +32,7 @@ class FahrplanService:
         with self._connection.cursor() as cursor:
             return list(
                 map(
-                    lambda x: FahrplanDTO(nr=x[0], name=x[1], von=x[2], bis=x[3]),
+                    lambda x: FahrplanDTO(nr=x[0], name=x[1], von=x[2], bis=x[3], zugnummer=x[4]),
                     cursor.execute(
                         query,
                         bvars

@@ -16,6 +16,7 @@ class FahrplanDTO(BaseModel):
     name: str
     von: datetime
     bis: datetime
+    zugnummer: int
 
 
 class BahnsteigFahrtDTO(BaseModel):

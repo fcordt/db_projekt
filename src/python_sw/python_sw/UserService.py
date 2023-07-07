@@ -3,7 +3,7 @@ from fastapi import Depends, HTTPException
 from oracledb import Connection, DatabaseError
 
 from python_sw.DbService import get_db_service
-from python_sw.dto_models import BahnsteigFahrtDTO, FahplanStopDTO, FahrplanDTO, UserDTO
+from python_sw.dto_models import UserDTO
 
 logger = logging.getLogger(__name__) 
 
