@@ -1,3 +1,4 @@
+from datetime import date
 from typing import Optional
 from fastapi import Body, Depends, FastAPI, Path, Query
 from python_sw.UserService import UserService
@@ -89,12 +90,36 @@ def post_user(nr: str = Path(),
              user_service: UserService = Depends()):
     user_service.delete_kunde(kundennummer=nr)
 
-@app.get("/api/v1/trains/{nr}")
-def get_zug(nr: int = Path(), zug_service: ZugService = Depends()):
-     return zug_service.get_zug(nr)
+@app.get("/api/v1/free-seats")
+def get_free_seats(
+        fahrplan_nr: int = Query(), 
+        abfahrt_bahnhof: str = Query(), 
+        ankunft_bahnhof: str = Query(),
+        datum: date = Query(),
+        zug_service: ZugService = Depends()
+        ):
+    return zug_service.get_zug(fahrplan_nr, abfahrt_bahnhof, ankunft_bahnhof, datum)
 
 @app.get("/api/v1/ticket/price")
-def get_preis(fahrplan_nr: int = Query(), wagon_nr: int = Query(), abfahrt_bahnhof: str = Query(), ankunft_bahnhof: str = Query()):
+def get_preis(fahrplan_nr: int = Query(), wagon_nr: int = Query(), abfahrt_bahnhof: str = Query(), ankunft_bahnhof: str = Query(), datum: date = Query()):
      pass
 
+@app.post("/api/v1/ticket/pre-reservation")
+def reserve_ticket(
+          fahrplan_nr: int = Query(), 
+          wagon_nr: int = Query(), 
+          sitzplatznr: int = Query(), 
+          abfahrt_bahnhof: str = Query(), 
+          ankunft_bahnhof: str = Query(), 
+          datum: date = Query()):
+    pass
+
 @app.post("/api/v1/ticket/reservation")
+def reserve_ticket(
+          fahrplan_nr: int = Query(), 
+          wagon_nr: int = Query(), 
+          sitzplatznr: int = Query(), 
+          abfahrt_bahnhof: str = Query(), 
+          ankunft_bahnhof: str = Query(), 
+          datum: date = Query()):
+    pass
