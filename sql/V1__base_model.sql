@@ -251,8 +251,7 @@ CREATE TABLE wagon (
     reihenfolge          NUMBER(3) NOT NULL,
     wagontyp_bezeichnung VARCHAR2(50) NOT NULL,
     klasse_id            NUMBER(2) NOT NULL,
-    zug_zugnummer        NUMBER(10) NOT NULL,
-    anzahl_sitze         NUMBER(3) NOT NULL,
+    zug_zugnummer        NUMBER(10) NOT NULL
 );
 
 ALTER TABLE wagon ADD CONSTRAINT wagon_pk PRIMARY KEY ( zug_zugnummer,

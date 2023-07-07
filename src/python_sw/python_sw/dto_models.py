@@ -35,11 +35,20 @@ class FahplanStopDTO(BaseModel):
     ankunft: Optional[BahnsteigFahrtDTO]
 
 class UserDTO(BaseModel):
-    class Config:
-        orm_mode = True
     vorname: str
     nachname: str
     kundennummer: str
     adresse: str
     plz: str
     ort: str
+
+class WagonDTO(BaseModel):
+    wagontyp: str
+    klasse: int
+    freie_sitze: list[int]
+
+class ZugDTO(BaseModel):
+    name: str
+    zugnummer: int
+    zugtyp: str
+    wagen: list[WagonDTO]
