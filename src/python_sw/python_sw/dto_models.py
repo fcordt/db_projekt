@@ -1,4 +1,5 @@
-from datetime import datetime
+from datetime import date, datetime
+from decimal import Decimal
 from typing import Optional
 from pydantic import BaseModel
 
@@ -53,3 +54,10 @@ class ZugDTO(BaseModel):
     zugnummer: int
     zugtyp: str
     wagen: list[WagonDTO]
+
+class TicketPreisDTO(BaseModel):
+    anzahl_stationen: int
+    preis_je_station: float
+    ticketpreis: float
+    reservierungsaufschlag: float
+    gesamtkosten: float

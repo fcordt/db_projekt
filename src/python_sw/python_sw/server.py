@@ -7,6 +7,7 @@ from python_sw.BahnhofService import BahnhofService
 from python_sw.FahplanService import FahrplanService
 from python_sw.dto_models import BahnsteigFahrtInsertDTO, FahplanStopDTO, FahrplanDTO, TrainStationDTO, UserDTO
 from python_sw.ZugService import ZugService
+from python_sw.TicketPreisService import TicketPreisService
 
 app = FastAPI()
 
@@ -30,7 +31,7 @@ def get_fahrplan(nr: int, fahrplan_service: FahrplanService = Depends()):
 
 @app.delete("/api/v1/schedule-details/{id}", status_code=200)
 def delete_schedule(id: int, fahrplan_service: FahrplanService = Depends()):
-    fahrplan_service.delete_fahrplan_detail(nr)
+    fahrplan_service.delete_fahrplan_detail(id)
 
 @app.post("/api/v1/schedule-details", status_code=201)
 def post_schedult_details(
@@ -101,7 +102,14 @@ def get_free_seats(
     return zug_service.get_zug(fahrplan_nr, abfahrt_bahnhof, ankunft_bahnhof, datum)
 
 @app.get("/api/v1/ticket/price")
-def get_preis(fahrplan_nr: int = Query(), wagon_nr: int = Query(), abfahrt_bahnhof: str = Query(), ankunft_bahnhof: str = Query(), datum: date = Query()):
+def get_preis(
+        fahrplan_nr: int = Query(), 
+        wagon_nr: int = Query(), 
+        abfahrt_bahnhof: str = Query(), 
+        ankunft_bahnhof: str = Query(), 
+        datum: date = Query(),
+        ticket_preis_service : TicketPreisService = Depends()
+    ):
      pass
 
 @app.post("/api/v1/ticket/pre-reservation")
