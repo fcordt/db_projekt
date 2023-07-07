@@ -14,19 +14,20 @@ class FahrplanService:
     def get_fahrplaene(
         self, abfahrt_bahnhof: str = None, ankunft_bahnhof: str = None, von: datetime = datetime(1991, 1, 1), bis: datetime = datetime(9999, 1, 1)
     ):
-        query = "SELECT DISTINCT NR, NAME, VON_DATUM, BIS_DATUM FROM DBUSER.FAHRPLAN"
-        if abfahrt_bahnhof is not None or ankunft_bahnhof is not None:
-            query += " INNER JOIN DBUSER.STRECKENABSCHNITT ON FAHRPLAN_NR = NR"
+        bvars = []
+        query = "SELECT FP.NR, FP.NAME, FP.VON_DATUM, FP.BIS_DATUM FROM DBUSER.FAHRPLAN FP"
+        if abfahrt_bahnhof is not None:
+            query += " INNER JOIN DBUSER.STRECKENABSCHNITT VSA ON VSA.FAHRPLAN_NR = FP.FAHRPLAN_NR AND VSA.ABFAHRT_BAHNHOF_NAME = :abfbhf"
+            bvars.append(abfahrt_bahnhof)
+        if ankunft_bahnhof is not None:
+            query += " INNER JOIN DBUSER.STRECKENABSCHNITT BSA ON BSA.FAHRPLAN_NR = FP.FAHRPLAN_NR AND BSA.ANKUNFT_BAHNHOF_NAME = :ankbhf"
+            bvars.append(ankunft_bahnhof)
 
         query += " WHERE VON_DATUM < :bis_date AND BIS_DATUM > :von_date"
-        bvars = [bis, von]
-        if abfahrt_bahnhof is not None:
-            bvars.append(abfahrt_bahnhof)
-            query += " AND ABFAHRT_BAHNHOF_NAME = :abbf"
-        if ankunft_bahnhof is not None:
-            bvars.append(ankunft_bahnhof)
-            query += " AND ANKUNFT_BAHNHOF_NAME = :anbf"
-        #todo (oder eher nicht): Ankunftsbahnhof > abfahrtsbahnhof
+        bvars.append(bis)
+        bvars.append(von)
+        if ankunft_bahnhof is not None and abfahrt_bahnhof is not None:
+            query += " AND VSA.abfahrtszeit <= BFA.ankunftszeit"
 
         with self._connection.cursor() as cursor:
             return list(

@@ -101,6 +101,20 @@ CREATE TABLE fahrplan (
 
 ALTER TABLE fahrplan ADD CONSTRAINT fahrplan_pk PRIMARY KEY ( nr );
 
+CREATE SEQUENCE fahrplan_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER fahrplan_insert 
+BEFORE INSERT ON fahrplan 
+FOR EACH ROW
+
+BEGIN
+  SELECT fahrplan_seq.NEXTVAL
+  INTO   :new.nr
+  FROM   dual;
+END;
+/
+
+
 CREATE TABLE klasse (
     id          NUMBER(2) NOT NULL,
     bezeichnung VARCHAR2(50) NOT NULL
@@ -220,11 +234,25 @@ ALTER TABLE ticket
 
 ALTER TABLE ticket ADD CONSTRAINT ticket_pk PRIMARY KEY ( ticketnummer );
 
+CREATE SEQUENCE ticket_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER ticket_insert 
+BEFORE INSERT ON ticket 
+FOR EACH ROW
+
+BEGIN
+  SELECT ticket_seq.NEXTVAL
+  INTO   :new.ticketnummer
+  FROM   dual;
+END;
+/
+
 CREATE TABLE wagon (
     reihenfolge          NUMBER(3) NOT NULL,
     wagontyp_bezeichnung VARCHAR2(50) NOT NULL,
     klasse_id            NUMBER(2) NOT NULL,
-    zug_zugnummer        NUMBER(10) NOT NULL
+    zug_zugnummer        NUMBER(10) NOT NULL,
+    anzahl_sitze         NUMBER(3) NOT NULL,
 );
 
 ALTER TABLE wagon ADD CONSTRAINT wagon_pk PRIMARY KEY ( zug_zugnummer,

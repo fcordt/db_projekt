@@ -1,6 +1,6 @@
 from typing import List
 from fastapi import Depends
-from oracledb import Connection, SessionPool
+from oracledb import Connection
 
 from python_sw.DbService import get_db_service
 from python_sw.dto_models import TrainStationDTO
