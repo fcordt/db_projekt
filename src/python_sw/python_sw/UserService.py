@@ -2,13 +2,13 @@ import logging
 from fastapi import Depends, HTTPException
 from oracledb import Connection, DatabaseError
 
-from python_sw.DbService import get_db_service
+from python_sw.DbService import get_db
 from python_sw.dto_models import UserDTO
 
 logger = logging.getLogger(__name__) 
 
 class UserService:
-    def __init__(self, connection: Connection = Depends(get_db_service)):
+    def __init__(self, connection: Connection = Depends(get_db())):
         self._connection = connection
 
     def get_users(

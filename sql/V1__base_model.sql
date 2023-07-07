@@ -28,7 +28,7 @@ ALTER TABLE bahnsteig ADD CONSTRAINT bahnsteig_pk PRIMARY KEY ( bahnhof_name,
 CREATE TABLE dauerticket (
     ticketnummer        NUMBER NOT NULL,
     kundin_kundennummer VARCHAR2(9) NOT NULL,
-    dauertyp_id         VARCHAR2(10) NOT NULL,
+    dauertyp_id         VARCHAR2(10) NOT NULL
 );
 
 ALTER TABLE dauerticket ADD CONSTRAINT dauerticket_pk PRIMARY KEY ( ticketnummer );

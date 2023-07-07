@@ -3,12 +3,12 @@ from typing import Optional
 from fastapi import Depends
 from oracledb import Connection
 
-from python_sw.DbService import get_db_service
+from python_sw.DbService import get_db
 from python_sw.dto_models import BahnsteigFahrtDTO, BahnsteigFahrtInsertDTO, FahplanStopDTO, FahrplanDTO
 
 
 class FahrplanService:
-    def __init__(self, connection: Connection = Depends(get_db_service)):
+    def __init__(self, connection: Connection = Depends(get_db())):
         self._connection = connection
 
     def get_fahrplaene(
