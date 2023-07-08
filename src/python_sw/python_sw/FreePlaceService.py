@@ -15,7 +15,7 @@ class FreePlaceService:
                                       [ticket_nr]):
                 return row[0] == 0
 
-    def get_free_tickets(self, fahrplan_nr: int, abfahrt_bahnhof: str, ankunft_bahnhof: str, datum: date, wagon_nr: int) -> list[int]:
+    def get_free_seats(self, fahrplan_nr: int, abfahrt_bahnhof: str, ankunft_bahnhof: str, datum: date, wagon_nr: int) -> list[int]:
         freie_plaetze = []
         with self._connection.cursor() as cursor:
             for platz in cursor.execute("""

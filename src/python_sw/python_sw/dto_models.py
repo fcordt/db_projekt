@@ -45,6 +45,7 @@ class UserDTO(BaseModel):
     ort: str
 
 class WagonDTO(BaseModel):
+    wagonnummer: int
     wagontyp: str
     klasse: int
     freie_sitze: list[int]

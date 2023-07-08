@@ -27,13 +27,14 @@ class ZugService:
                                           """, [fahrplan_nr]):
                 freie_plaetze = FreePlaceService(
                         connection=self._connection
-                    ).get_free_tickets(
+                    ).get_free_seats(
                         fahrplan_nr=fahrplan_nr, 
                         abfahrt_bahnhof=abfahrt_bahnhof, 
                         ankunft_bahnhof=ankunft_bahnhof, 
                         datum=datum,
                         wagon_nr=wagon[0])
                 r_val.append(WagonDTO(
+                    wagonnummer=wagon[0],
                     wagontyp=wagon[1], 
                     klasse=wagon[2], 
                     freie_sitze=freie_plaetze))

@@ -87,7 +87,7 @@ class TicketReservationService:
             ankunft_bahnhof: str, 
             datum: date) -> TicketDTO:
         self._lock_sitzplatz(sitzplatznr, wagon_nr, fahrplan_nr)
-        free_places = FreePlaceService(self._connection).get_free_tickets(fahrplan_nr, abfahrt_bahnhof, ankunft_bahnhof, datum, wagon_nr)
+        free_places = FreePlaceService(self._connection).get_free_seats(fahrplan_nr, abfahrt_bahnhof, ankunft_bahnhof, datum, wagon_nr)
         if sitzplatznr not in free_places:
             raise HTTPException(status_code=404, detail="Ticket bereits vergeben")
         
