@@ -61,3 +61,6 @@ class TicketPreisDTO(BaseModel):
     ticketpreis: float
     reservierungsaufschlag: float
     gesamtkosten: float
+
+class TicketDTO(BaseModel):
+    ticket_nr: int

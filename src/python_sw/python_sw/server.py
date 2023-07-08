@@ -8,6 +8,7 @@ from python_sw.FahplanService import FahrplanService
 from python_sw.dto_models import BahnsteigFahrtInsertDTO, FahplanStopDTO, FahrplanDTO, TrainStationDTO, UserDTO
 from python_sw.ZugService import ZugService
 from python_sw.TicketPreisService import TicketPreisService
+from python_sw.TicketReservationService import TicketReservationService
 
 app = FastAPI()
 
@@ -119,8 +120,9 @@ def create_ticket_with_reservation(
           sitzplatznr: int = Query(), 
           abfahrt_bahnhof: str = Query(), 
           ankunft_bahnhof: str = Query(), 
-          datum: date = Query()):
-    pass
+          datum: date = Query(),
+          ticket_reservation_service: TicketReservationService = Depends()):
+    return ticket_reservation_service.create_ticket(fahrplan_nr, wagon_nr, sitzplatznr, abfahrt_bahnhof, ankunft_bahnhof, datum)
 
 @app.put("/api/v1/ticket/{ticketnr}")
 def mark_ticket_as_paid(
