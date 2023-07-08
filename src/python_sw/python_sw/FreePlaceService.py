@@ -35,7 +35,7 @@ class FreePlaceService:
                                                 ON E.TICKETNUMMER = ET.TICKETNUMMER
                                                 INNER JOIN TICKET T
                                                 ON E.TICKETNUMMER = T.TICKETNUMMER
-                                                WHERE NVL(E.RESERVIERDATUM, TO_DATE('01011991', 'ddmmyyyy')) > (sysdate - interval '10' minute)
+                                                WHERE COALESCE(E.RESERVIERDATUM, TO_DATE('01011991', 'ddmmyyyy')) > (sysdate - interval '10' minute)
                                                 AND ET.ABFAHRT_BAHNHOF_NAME IN (
                                                     SELECT SA.ANKUNFT_BAHNHOF_NAME
                                                     FROM STRECKENABSCHNITT SA

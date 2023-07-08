@@ -39,14 +39,14 @@ class TicketPreisService:
                         WHERE S2.FAHRPLAN_NR = S1.FAHRPLAN_NR
                         AND S2.ANKUNFT_BAHNHOF_NAME = :akbhf
                     )
-                """, fahrplan_nr, abfahrt_bahnhof, ankunft_bahnhof):
+                """, [fahrplan_nr, abfahrt_bahnhof, ankunft_bahnhof]):
                 anz_stationen = row[0]
             for row in cursor.execute(
                 """
                     SELECT P.KOSTEN
-                    FROM PREIS_JE_HALTESTELLE
-                    WHERE P.VON >= :datum
-                    AND COALESCE(P.BIS, TO_DATE('31129999', 'ddmmyyyy')) < :datum
+                    FROM PREIS_JE_HALTESTELLE P
+                    WHERE P.VON <= :datum
+                    AND COALESCE(P.BIS, TO_DATE('31129999', 'ddmmyyyy')) > :datum
                 """, [datum, datum]):
                 preis_je_haltestelle = row[0]
             for row in cursor.execute(
@@ -56,9 +56,9 @@ class TicketPreisService:
                     INNER JOIN WAGON W
                     ON W.WAGONTYP_BEZEICHNUNG = R.WAGONTYP_BEZEICHNUNG
                     INNER JOIN FAHRPLAN FP
-                    IN FP.ZUG_ZUGNUMMER = W.ZUG_ZUGNUMMER
-                    WHERE R.VON >= :datum
-                    AND COALESCE(R.BIS, TO_DATE('31129999', 'ddmmyyyy')) < :datum
+                    ON FP.ZUG_ZUGNUMMER = W.ZUG_ZUGNUMMER
+                    WHERE R.VON <= :datum
+                    AND COALESCE(R.BIS, TO_DATE('31129999', 'ddmmyyyy')) > :datum
                     AND W.REIHENFOLGE = :rf
                     AND FP.NR = :fpn
                 """, [datum, datum, wagon_nr, fahrplan_nr]
