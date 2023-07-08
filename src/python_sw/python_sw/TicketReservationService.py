@@ -17,7 +17,7 @@ class TicketReservationService:
                         """
                         SELECT * FROM SITZPLATZ 
                         INNER JOIN FAHRPLAN
-                        ON FAHRPLAN.ZUG_ZUGNUMMER = SITZPLATZ.WAGIN_ZUGNUMMER
+                        ON FAHRPLAN.ZUG_ZUGNUMMER = SITZPLATZ.WAGON_ZUGNUMMER
                         WHERE SITZPLATZNUMMER = :spnr AND FAHRPLAN.NR = :fpnr AND WAGON_REIHENFOLGE = :rf
                         FOR UPDATE
                         """,
@@ -40,7 +40,7 @@ class TicketReservationService:
                 """
                     INSERT INTO TICKET(TICKETNUMMER, GÜLTIGKEITSDATUM, TICKET_TYP)
                     VALUES(:nr, :dat, :typ)
-                """, [ticket_nr, typ, datum])
+                """, [ticket_nr, datum, typ])
             
     def _create_einzelticket(self, ticket_nr: int, abfahrt_bahnhof: str, abfahrt_bahnsteig: int, ankunft_bahnhof: str, ankunft_bahnsteig: int):
         with self._connection.cursor() as cursor:
@@ -55,10 +55,34 @@ class TicketReservationService:
         with self._connection.cursor() as cursor:
             cursor.execute(
                 """
-                    INSERT INTO EINZELTIVKET_MIT_SPR(TICKETNUMMER, RESERVIERDATUM, SITZPLATZ_WAGON_ZUGNUMMER, SITZPLATZ_WAGON_REIHENFOLGE, SITZPLATZ_SITZPLATZNUMMER)
+                    INSERT INTO EINZELTICKET_MIT_SPR(TICKETNUMMER, RESERVIERDATUM, SITZPLATZ_WAGON_ZUGNUMMER, SITZPLATZ_WAGON_REIHENFOLGE, SITZPLATZ_SITZPLATZNUMMER)
                     VALUES(:tnr, SYSDATE, :znr, :wnr, :snr)
                 """, [ticket_nr, zug_nr, wagon_nr, sitzplatz_nr]
             )
+
+    def _get_bahnsteige(self, fahrplan_nr: int, abfahrt_bahnhof: str, ankunft_bahnhof: str):
+        with self._connection.cursor() as cursor:
+            abfahrt_nr = 0
+            ankunft_nr = 0
+            for row in cursor.execute(
+                """
+                    SELECT ABFAHRT_BAHNSTEIG_NR
+                    FROM STRECKENABSCHNITT S
+                    WHERE S.FAHRPLAN_NR = :fpnr
+                    AND S.ABFAHRT_BAHNHOF_NAME = :abf
+                """, [fahrplan_nr, abfahrt_bahnhof]
+            ):
+                abfahrt_nr = row[0]
+            for row in cursor.execute(
+                """
+                    SELECT ANKUNFT_BAHNSTEIG_NR
+                    FROM STRECKENABSCHNITT S
+                    WHERE S.FAHRPLAN_NR = :fpnr
+                    AND S.ANKUNFT_BAHNHOF_NAME = :abf
+                """, [fahrplan_nr, ankunft_bahnhof]
+            ):
+                ankunft_nr = row[0]
+            return (abfahrt_nr, ankunft_nr)
 
     def _insert_ticket(
             self,

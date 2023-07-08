@@ -1,4 +1,4 @@
 # to run 
 > python -m pip install poetry
-> poetry install
+> poetry shell
 > uvicorn python_sw.server:app
