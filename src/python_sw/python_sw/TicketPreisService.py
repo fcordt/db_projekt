@@ -64,3 +64,10 @@ class TicketPreisService:
                 """, [datum, datum, wagon_nr, fahrplan_nr]
             ):
                 reservierungsaufschlag = row[0]
+
+            return TicketPreisDTO(
+                anzahl_stationen=anz_stationen, 
+                preis_je_station=preis_je_haltestelle, 
+                ticketpreis=preis_je_haltestelle*anz_stationen,
+                reservierungsaufschlag=reservierungsaufschlag,
+                gesamtkosten=preis_je_haltestelle*anz_stationen + reservierungsaufschlag)
