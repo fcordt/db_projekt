@@ -37,29 +37,33 @@ class FreePlaceService:
                                                 ON E.TICKETNUMMER = T.TICKETNUMMER
                                                 WHERE COALESCE(E.RESERVIERDATUM, TO_DATE('01011991', 'ddmmyyyy')) > (sysdate - interval '10' minute)
                                                 AND ET.ABFAHRT_BAHNHOF_NAME IN (
-                                                    SELECT SA.ANKUNFT_BAHNHOF_NAME
-                                                    FROM STRECKENABSCHNITT SA
-                                                    WHERE SA.FAHRPLAN_NR = :fpnr
-                                                    AND SA.ANKUNFTSZEIT < (
-                                                        SELECT SA1.ANKUNFTSZEIT
-                                                        FROM STRECKENABSCHNITT SA1
-                                                        WHERE SA1.FAHRPLAN_NR = :fpnr
-                                                        AND SA1.ANKUNFT_BAHNHOF_NAME = :ankunft_bahnhof
-                                                    )
-                                                )
-                                                AND ET.ANKUNFT_BAHNHOF_NAME IN (
                                                     SELECT SA.ABFAHRT_BAHNHOF_NAME
                                                     FROM STRECKENABSCHNITT SA
                                                     WHERE SA.FAHRPLAN_NR = :fpnr
-                                                    AND SA.ABFAHRTSZEIT > (
+                                                    AND SA.ABFAHRTSZEIT < (
                                                         SELECT SA1.ABFAHRTSZEIT
                                                         FROM STRECKENABSCHNITT SA1
                                                         WHERE SA1.FAHRPLAN_NR = :fpnr
-                                                        AND SA1.ABFAHRT_BAHNHOF_NAME = :abfahrt_bahnhof
+                                                        AND SA1.ABFAHRT_BAHNHOF_NAME = :ankunft_bahnhof
+                                                    )
+                                                )
+                                                AND ET.ANKUNFT_BAHNHOF_NAME IN (
+                                                    SELECT SA.ANKUNFT_BAHNHOF_NAME
+                                                    FROM STRECKENABSCHNITT SA
+                                                    WHERE SA.FAHRPLAN_NR = :fpnr
+                                                    AND SA.ANKUNFTSZEIT > (
+                                                        SELECT SA1.ANKUNFTSZEIT
+                                                        FROM STRECKENABSCHNITT SA1
+                                                        WHERE SA1.FAHRPLAN_NR = :fpnr
+                                                        AND SA1.ANKUNFT_BAHNHOF_NAME = :abfahrt_bahnhof
                                                     )
                                                 )
                                                 AND T.GÜLTIGKEITSDATUM = :dat
+                                                AND E.SITZPLATZ_WAGON_ZUGNUMMER = S.WAGON_ZUGNUMMER
+                                                AND E.SITZPLATZ_WAGON_REIHENFOLGE = S.WAGON_REIHENFOLGE
+                                                AND E.SITZPLATZ_SITZPLATZNUMMER = S.SITZPLATZNUMMER
                                             )
+                                            ORDER BY S.SITZPLATZNUMMER ASC
                                         """, rf=wagon_nr, fpnr=fahrplan_nr, ankunft_bahnhof=ankunft_bahnhof, abfahrt_bahnhof=abfahrt_bahnhof, dat=datum):
                     freie_plaetze.append(platz[0])
         return freie_plaetze

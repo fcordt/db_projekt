@@ -17,17 +17,17 @@ class FahrplanService:
         bvars = []
         query = "SELECT FP.NR, FP.NAME, FP.VON_DATUM, FP.BIS_DATUM, FP.ZUG_ZUGNUMMER FROM DBUSER.FAHRPLAN FP"
         if abfahrt_bahnhof is not None:
-            query += " INNER JOIN DBUSER.STRECKENABSCHNITT VSA ON VSA.FAHRPLAN_NR = FP.FAHRPLAN_NR AND VSA.ABFAHRT_BAHNHOF_NAME = :abfbhf"
+            query += " INNER JOIN DBUSER.STRECKENABSCHNITT VSA ON VSA.FAHRPLAN_NR = FP.NR AND VSA.ABFAHRT_BAHNHOF_NAME = :abfbhf"
             bvars.append(abfahrt_bahnhof)
         if ankunft_bahnhof is not None:
-            query += " INNER JOIN DBUSER.STRECKENABSCHNITT BSA ON BSA.FAHRPLAN_NR = FP.FAHRPLAN_NR AND BSA.ANKUNFT_BAHNHOF_NAME = :ankbhf"
+            query += " INNER JOIN DBUSER.STRECKENABSCHNITT BSA ON BSA.FAHRPLAN_NR = FP.NR AND BSA.ANKUNFT_BAHNHOF_NAME = :ankbhf"
             bvars.append(ankunft_bahnhof)
 
         query += " WHERE VON_DATUM < :bis_date AND BIS_DATUM > :von_date"
         bvars.append(bis)
         bvars.append(von)
         if ankunft_bahnhof is not None and abfahrt_bahnhof is not None:
-            query += " AND VSA.abfahrtszeit <= BFA.ankunftszeit"
+            query += " AND VSA.abfahrtszeit <= BSA.ankunftszeit"
 
         with self._connection.cursor() as cursor:
             return list(
