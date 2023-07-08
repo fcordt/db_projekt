@@ -21,7 +21,6 @@ class FahrplanDTO(BaseModel):
 
 
 class BahnsteigFahrtDTO(BaseModel):
-    id: int
     bahnhof_name: str
     bahnsteig_nr: int
     uhrzeit: datetime
@@ -33,6 +32,7 @@ class BahnsteigFahrtInsertDTO(BaseModel):
 
 
 class FahplanStopDTO(BaseModel):
+    id: int
     abfahrt: Optional[BahnsteigFahrtDTO]
     ankunft: Optional[BahnsteigFahrtDTO]
 

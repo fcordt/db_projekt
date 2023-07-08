@@ -60,13 +60,13 @@ class FahrplanService:
                 end = None
                 if item[0]:
                     start = BahnsteigFahrtDTO(
-                        uhrzeit=item[0], bahnsteig_nr=item[2], bahnhof_name=item[4], id=item[5]
+                        uhrzeit=item[0], bahnsteig_nr=item[2], bahnhof_name=item[4]
                     )
                 if item[1]:
                     end = BahnsteigFahrtDTO(
                         uhrzeit=item[1], bahnsteig_nr=item[3], bahnhof_name=item[5]
                     )
-                rv.append(FahplanStopDTO(abfahrt=start, ankunft=end))
+                rv.append(FahplanStopDTO(abfahrt=start, ankunft=end, id=item[6]))
             return rv
         
     def delete_fahrplan_detail(self, detail_nr: int):

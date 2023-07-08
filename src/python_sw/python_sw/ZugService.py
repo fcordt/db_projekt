@@ -18,7 +18,7 @@ class ZugService:
                                           SELECT 
                                             W.REIHENFOLGE,
                                             W.WAGONTYP_BEZEICHNUNG,
-                                            W.KLASSE_ID,
+                                            W.KLASSE_ID
                                           FROM WAGON W
                                           INNER JOIN FAHRPLAN FP
                                           ON W.ZUG_ZUGNUMMER = FP.ZUG_ZUGNUMMER

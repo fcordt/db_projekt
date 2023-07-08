@@ -58,12 +58,11 @@ class UserService:
                 raise HTTPException(status_code=404, detail="Benutzer nicht vorhanden")
             return UserDTO(kundennummer=x[0], vorname=x[1], nachname=x[2], adresse=x[3], plz=x[4], ort=x[5])
 
-    def insert_kunde(self, kundennummer: str, vorname: str, nachname: str, adresse: str, plz: str):
+    def insert_kunde(self, vorname: str, nachname: str, adresse: str, plz: str):
         with self._connection.cursor() as cursor:
             try:
                 cursor.execute(
-                    "INSERT INTO KUNDIN(KUNDENNUMMER, VORNAME, NACHNAME, ADRESSE, ORT_PLZ) VALUES (:nr, :vn, :nn, :adr, :plz)",
-                    nr=kundennummer,
+                    "INSERT INTO KUNDIN(VORNAME, NACHNAME, ADRESSE, ORT_PLZ) VALUES (:vn, :nn, :adr, :plz)",
                     vn=vorname,
                     nn=nachname,
                     adr=adresse,

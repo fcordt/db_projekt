@@ -18,33 +18,6 @@ class FreePlaceService:
     def get_free_tickets(self, fahrplan_nr: int, abfahrt_bahnhof: str, ankunft_bahnhof: str, datum: date, wagon_nr: int) -> list[int]:
         freie_plaetze = []
         with self._connection.cursor() as cursor:
-            abfahrt_bahnhoefe = []
-            ankunft_bahnhoefe = []
-
-            for bahnhof in cursor.execute(  """
-                                                SELECT SA.ANKUNFT_BAHNHOF_NAME
-                                                FROM STRECKENABSCHNITT SA
-                                                WHERE SA.FAHRPLANNR = :fp
-                                                AND SA.ANKUNFTZEIT < (
-                                                    SELECT SA1.ANKUNFTZEIT
-                                                    FROM STRECKENABSCHNITT SA1
-                                                    WHERE SA1.FAHRPLANNR = :fp
-                                                    AND SA1.ANKUNFT_BAHNHOF = :bf
-                                                )
-                                            """, fp=fahrplan_nr, bf=ankunft_bahnhof):
-                ankunft_bahnhoefe.append(bahnhof[0])
-            for bahnhof in cursor.execute(  """
-                                                SELECT SA.ABFAHRT_BAHNHOF_NAME
-                                                FROM STRECKENABSCHNITT SA
-                                                WHERE SA.FAHRPLANNR = :fp
-                                                AND SA.ABFAHRTZEIT > (
-                                                    SELECT SA1.ABFAHRTZEIT
-                                                    FROM STRECKENABSCHNITT SA1
-                                                    WHERE SA1.FAHRPLANNR = :fp
-                                                    AND SA1.ABFAHRT_BAHNHOF = :bf
-                                                )
-                                            """, fp=fahrplan_nr, bf=abfahrt_bahnhof):
-                abfahrt_bahnhoefe.append(bahnhof[0])
             for platz in cursor.execute("""
                                             SELECT
                                                 S.SITZPLATZNUMMER
@@ -56,21 +29,37 @@ class FreePlaceService:
                                             ON P.ZUG_ZUGNUMMER = W.ZUG_ZUGNUMMER
                                             WHERE S.WAGON_REIHENFOLGE = :rf
                                             AND P.NR = :fpnr
-                                            AND NOT EXIST (
+                                            AND NOT EXISTS (
                                                 SELECT 1 FROM EINZELTICKET_MIT_SPR E
                                                 INNER JOIN EINZELTICKET ET
                                                 ON E.TICKETNUMMER = ET.TICKETNUMMER
                                                 INNER JOIN TICKET T
                                                 ON E.TICKETNUMMER = T.TICKETNUMMER
-                                                WHERE COALESCE(E.RESERVIERDATUM, TO_DATE('01011991', 'ddmmyyyy')) > sysdate - interval '10' minute
+                                                WHERE NVL(E.RESERVIERDATUM, TO_DATE('01011991', 'ddmmyyyy')) > (sysdate - interval '10' minute)
                                                 AND ET.ABFAHRT_BAHNHOF_NAME IN (
-                                                    :bfaf
+                                                    SELECT SA.ANKUNFT_BAHNHOF_NAME
+                                                    FROM STRECKENABSCHNITT SA
+                                                    WHERE SA.FAHRPLAN_NR = :fpnr
+                                                    AND SA.ANKUNFTSZEIT < (
+                                                        SELECT SA1.ANKUNFTSZEIT
+                                                        FROM STRECKENABSCHNITT SA1
+                                                        WHERE SA1.FAHRPLAN_NR = :fpnr
+                                                        AND SA1.ANKUNFT_BAHNHOF_NAME = :ankunft_bahnhof
+                                                    )
                                                 )
                                                 AND ET.ANKUNFT_BAHNHOF_NAME IN (
-                                                    :bfak
+                                                    SELECT SA.ABFAHRT_BAHNHOF_NAME
+                                                    FROM STRECKENABSCHNITT SA
+                                                    WHERE SA.FAHRPLAN_NR = :fpnr
+                                                    AND SA.ABFAHRTSZEIT > (
+                                                        SELECT SA1.ABFAHRTSZEIT
+                                                        FROM STRECKENABSCHNITT SA1
+                                                        WHERE SA1.FAHRPLAN_NR = :fpnr
+                                                        AND SA1.ABFAHRT_BAHNHOF_NAME = :abfahrt_bahnhof
+                                                    )
                                                 )
                                                 AND T.GÜLTIGKEITSDATUM = :dat
                                             )
-                                        """, [wagon_nr, fahrplan_nr, ankunft_bahnhoefe, abfahrt_bahnhoefe, datum]):
+                                        """, rf=wagon_nr, fpnr=fahrplan_nr, ankunft_bahnhof=ankunft_bahnhof, abfahrt_bahnhof=abfahrt_bahnhof, dat=datum):
                     freie_plaetze.append(platz[0])
         return freie_plaetze

@@ -1,6 +1,8 @@
 from datetime import date
 from typing import Optional
-from fastapi import Body, Depends, FastAPI, Path, Query
+from fastapi import Body, Depends, FastAPI, Path, Query, Request
+from fastapi.responses import PlainTextResponse
+from oracledb import IntegrityError
 from python_sw.UserService import UserService
 
 from python_sw.BahnhofService import BahnhofService
@@ -12,6 +14,9 @@ from python_sw.TicketReservationService import TicketReservationService
 
 app = FastAPI()
 
+@app.exception_handler(IntegrityError)
+def integrity_exception_handler(request: Request, exc: IntegrityError):
+     return PlainTextResponse(content=str(exc), status_code=400)
 
 @app.get("/api/v1/stations", response_model=list[TrainStationDTO])
 def get_bahnhof(name: Optional[str] = "", bahnhof_service: BahnhofService = Depends()):
@@ -70,13 +75,12 @@ def get_user(nr: str = Path(), user_service: UserService = Depends()):
     return user_service.get_user_by_kundennummer(nr)
 
 @app.post("/api/v1/users", status_code=201)
-def post_user(kundennummer: str = Body(), 
-              vorname: str = Body(),
+def post_user(vorname: str = Body(),
               nachname: str = Body(),
               adresse: str = Body(),
               plz: str= Body(),
              user_service: UserService = Depends()):
-    user_service.insert_kunde(kundennummer=kundennummer, vorname=vorname, nachname=nachname, adresse=adresse, plz=plz)
+    user_service.insert_kunde(vorname=vorname, nachname=nachname, adresse=adresse, plz=plz)
 
 @app.put("/api/v1/users/{nr}", status_code=200)
 def put_user(nr: str = Path(), 
