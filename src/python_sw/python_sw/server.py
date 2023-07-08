@@ -110,10 +110,10 @@ def get_preis(
         datum: date = Query(),
         ticket_preis_service : TicketPreisService = Depends()
     ):
-     pass
+     return ticket_preis_service.get_preis(fahrplan_nr, wagon_nr, abfahrt_bahnhof, ankunft_bahnhof, datum)
 
-@app.post("/api/v1/ticket/pre-reservation")
-def reserve_ticket(
+@app.post("/api/v1/ticket")
+def create_ticket_with_reservation(
           fahrplan_nr: int = Query(), 
           wagon_nr: int = Query(), 
           sitzplatznr: int = Query(), 
@@ -122,12 +122,7 @@ def reserve_ticket(
           datum: date = Query()):
     pass
 
-@app.post("/api/v1/ticket/reservation")
-def reserve_ticket(
-          fahrplan_nr: int = Query(), 
-          wagon_nr: int = Query(), 
-          sitzplatznr: int = Query(), 
-          abfahrt_bahnhof: str = Query(), 
-          ankunft_bahnhof: str = Query(), 
-          datum: date = Query()):
+@app.put("/api/v1/ticket/{ticketnr}")
+def mark_ticket_as_paid(
+          ticketnr: int = Path()):
     pass
