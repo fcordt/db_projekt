@@ -126,5 +126,7 @@ def create_ticket_with_reservation(
 
 @app.put("/api/v1/ticket/{ticketnr}")
 def mark_ticket_as_paid(
-          ticketnr: int = Path()):
-    pass
+          ticketnr: int = Path(),
+          ticket_reservation_service: TicketReservationService = Depends()):
+     ticket_reservation_service.update_ticket(ticketnr)
+    

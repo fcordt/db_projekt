@@ -9,6 +9,12 @@ class FreePlaceService:
     def __init__(self, connection: Connection):
         self._connection = connection
 
+    def is_ticket_free(self, ticket_nr: int):
+        with self._connection.cursor() as cursor:
+            for row in cursor.execute("SELECT COUNT(*) FROM EINZELTICKET_MIT_SPR WHERE E.TICKETNUMMER = :tnr AND COALESCE(E.RESERVIERDATUM, TO_DATE('01011991', 'ddmmyyyy')) > sysdate - interval '10' minute",
+                                      [ticket_nr]):
+                return row[0] == 0
+
     def get_free_tickets(self, fahrplan_nr: int, abfahrt_bahnhof: str, ankunft_bahnhof: str, datum: date, wagon_nr: int) -> list[int]:
         freie_plaetze = []
         with self._connection.cursor() as cursor:
